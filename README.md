@@ -10,7 +10,8 @@
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable-next-line MD036 -->
 _✨ **[Avalonia](https://github.com/AvaloniaUI/Avalonia)** 기반 **[MAAFramework](https://github.com/MaaXYZ/MaaFramework)** GUI 프로젝트 ✨_
-_✨ **[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia)**의 한국어 추가 버전 ✨_
+
+_✨ **[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia)** 의 한국어 추가 버전 ✨_
 <!-- prettier-ignore-end -->
 
   <img alt="license" src="https://img.shields.io/github/license/maynut02/MFAAvalonia-ko">
