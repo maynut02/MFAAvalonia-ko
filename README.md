@@ -26,7 +26,7 @@ _✨ **[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia)** 의 한국�
 ## 미리보기
 
 <p align="center">
-  <img alt="preview" src="https://github.com/maynut02/MFAAvalonia-ko/blob/master/MFAAvalonia/Img/preview.png" height="595" width="900" />
+  <img alt="preview" src="https://github.com/maynut02/MFAAvalonia-ko/MFAAvalonia/Img/preview.png" height="595" width="900" />
 </p>
 
 ## 사용 요구사항
