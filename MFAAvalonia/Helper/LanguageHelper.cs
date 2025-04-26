@@ -25,6 +25,7 @@ public static class LanguageHelper
         new("zh-hans", "简体中文"),
         new("zh-hant", "繁體中文"),
         new("en-us", "English"),
+        new("ko-kr", "한국어"),
     ];
 
     public static Dictionary<string, CultureInfo> Cultures { get; } = new() {};
