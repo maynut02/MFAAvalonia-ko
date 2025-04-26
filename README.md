@@ -5,52 +5,51 @@
 
 <div align="center">
 
-# MFAAvalonia
+# MFAAvalonia-ko
 
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable-next-line MD036 -->
-_✨ 基于 **[Avalonia](https://github.com/AvaloniaUI/Avalonia)** 的 **[MAAFramework](https://github.com/MaaXYZ/MaaFramework)** 通用 GUI 项目 ✨_
+_✨ **[Avalonia](https://github.com/AvaloniaUI/Avalonia)** 기반 **[MAAFramework](https://github.com/MaaXYZ/MaaFramework)** GUI 프로젝트 ✨_
+_✨ **[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia)**의 한국어 추가 버전 ✨_
 <!-- prettier-ignore-end -->
 
-  <img alt="license" src="https://img.shields.io/github/license/SweetSmellFox/MFAAvalonia">
+  <img alt="license" src="https://img.shields.io/github/license/maynut02/MFAAvalonia-ko">
   <img alt=".NET" src="https://img.shields.io/badge/.NET-≥%208-512BD4?logo=csharp">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet">
-  <img alt="commit" src="https://img.shields.io/github/commit-activity/m/SweetSmellFox/MFAAvalonia">
+  <img alt="commit" src="https://img.shields.io/github/commit-activity/m/maynut02/MFAAvalonia-ko">
 </div>
 <div align="center">
 
-[English](./README_en.md) | [简体中文](./README.md)
-
 </div>
 
-## 预览图
+## 미리보기
 
 <p align="center">
   <img alt="preview" src="https://github.com/SweetSmellFox/MFAAvalonia/blob/master/MFAAvalonia/Img/preview.png" height="595" width="900" />
 </p>
 
-## 使用需求
+## 사용 요구사항
 
 - .NET 8.0
-- 一个基于`MaaFramework`的资源项目
+- `MaaFramework`를 기반으로 한 리소스 프로젝트
 
-## 说明
+## 설명
 
-### 如何使用
+### 사용 방법
 
-#### 自动安装
+#### 자동 설치
 
-- 下载项目中workflows/install.yml并修改```项目名称```,```作者名```,```项目名```,```MAAxxx```
-- 将修改后的install.yml替换MAA项目模板.github/workflows/install.yml
-- 推送新版本
+- 프로젝트의 `workflows/install.yml`을 다운로드한 후, ```프로젝트 이름```, ```작성자 이름```, ```프로젝트 이름```, ```MAAxxx```를 수정합니다.
+- 수정한 `install.yml` 파일을 MAA 프로젝트 템플릿의 `.github/workflows/install.yml`로 교체합니다.
+- 새 버전을 푸시합니다.
 
-#### 手动安装
+#### 수동 설치
 
-- 下载最新发行版并解压
-- 将maafw项目中assets/resource中所有内容复制到MFAAvalonia/Resource中
-- 将maafw项目中assets/interface.json文件复制到MFAAvalonia/中
-- ***修改***刚刚复制的interface.json文件
-- 下面是一个例子
+- 최신 릴리스를 다운로드하고 압축을 해제합니다.
+- `maafw` 프로젝트의 `assets/resource`에 있는 모든 내용을 `MFAAvalonia/Resource`로 복사합니다.
+- `maafw` 프로젝트의 `assets/interface.json` 파일을 `MFAAvalonia/`로 복사합니다.
+- 방금 복사한 `interface.json` 파일을 ***수정***합니다.
+- 아래는 예제입니다.
 
  ```
 {
@@ -76,7 +75,7 @@ _✨ 基于 **[Avalonia](https://github.com/AvaloniaUI/Avalonia)** 的 **[MAAFra
 }
 ```
 
-修改为
+다음과 같이 수정
 
 ```
 {
@@ -112,43 +111,43 @@ _✨ 基于 **[Avalonia](https://github.com/AvaloniaUI/Avalonia)** 的 **[MAAFra
 }
 ```
 
-可以通过controller的数量来锁定控制，可以通过controller[0]来控制默认控制器
+controller의 수량을 통해 제어 잠금을 할 수 있으며 controller[0]를 통해 기본 컨트롤러를 제어할 수 있습니다.
 
-### `doc`字符串格式：
+### `doc` 문자열 형식:
 
-#### 使用类似`[color:red]`文本内容`[/color]`的标记来定义文本样式。
+#### `[color:red]`텍스트 내용`[/color]`과 같은 태그를 사용하여 텍스트 스타일을 정의할 수 있습니다.  
 
-#### 支持的标记包括：
+#### 지원되는 태그는 다음과 같습니다:
 
-- `[color:color_name]`：颜色，例如`[color:red]`。
+- `[color:color_name]`: 색상, 예: `[color:red]`.
 
--  ~~`[size:font_size]`：字号，例如`[size:20]`。~~
+- ~~`[size:font_size]`: 글꼴 크기, 예: `[size:20]`.~~
 
-- `[b]`：粗体。
+- `[b]`: 굵게.
 
-- `[i]`：斜体。
+- `[i]`: 기울임꼴.
 
-- `[u]`：下划线。
+- `[u]`: 밑줄.
 
-- `[s]`：删除线。
+- `[s]`: 취소선.
 
-- `[align:left/center/right]`：居左，居中或者居右，只能在一整行中使用。
+- `[align:left/center/right]`: 왼쪽 정렬, 가운데 정렬 또는 오른쪽 정렬. 한 줄 전체에서만 사용 가능.
 
-**注：上面注释内容为文档介绍用，实际运行时不建议写入。**
+**참고: 위 주석 내용은 문서 소개용으로 실제 실행 시에는 작성하지 않는 것이 좋습니다.**
 
-- 运行
+- 실행
 
-## 开发相关
+## 개발 관련
 
-- 欢迎各位大佬贡献代码
-- `MFAAvalonia` 有interface多语言支持,在`interface.json`同目录下新建`lang`文件夹,里面内含`zh-cn.json`,`zh-tw.json`和`en-us.json`后，doc和任务的name和选项的name可以使用key来指代。MFAAvalonia会自动根据语言来读取文件的key对应的value。如果没有则默认为key
-- `MFAAvalonia` 会读取`Resource`文件夹的`Announcement.md`作为公告，更新资源时会自动下载一份Changelog作为公告
-- `MFAAvalonia` 可以通过启动参数`-c 配置名称`来指定以特定配置文件启动，无须后缀名`.json`
+- 코드 기여를 환영합니다.
+- `MFAAvalonia`는 `interface` 다국어 지원을 제공합니다. `interface.json`과 동일한 디렉터리에 `lang` 폴더를 생성하고, 그 안에 `zh-cn.json`, `zh-tw.json`, `en-us.json` 파일을 추가하면 `doc` 및 작업의 `name`과 옵션의 `name`을 키로 참조할 수 있습니다. `MFAAvalonia`는 언어에 따라 파일의 키에 해당하는 값을 자동으로 읽습니다. 값이 없으면 기본적으로 키를 사용합니다.
+- `MFAAvalonia`는 `Resource` 폴더의 `Announcement.md` 파일을 공지로 읽으며, 리소스를 업데이트할 때 자동으로 Changelog를 다운로드하여 공지로 사용합니다.
+- `MFAAvalonia`는 시작 매개변수 `-c 구성 이름`을 통해 특정 구성 파일로 시작할 수 있습니다. 확장자 `.json`은 필요하지 않습니다.
 
-**注：在MFA的v1.1.6版本中，移除了focus系列字段，改为any focus，原先的不再可用！**
+**참고: MFA v1.1.6 버전에서는 `focus` 관련 필드가 제거되고 `any focus`로 대체되었습니다. 기존 필드는 더 이상 사용할 수 없습니다!**
 
 - `focus` : *string* | *object*  
-格式为
+형식
   ```
   "focus": {
     "start": "任务开始",  注：*string* | *string[]*    
@@ -160,39 +159,12 @@ _✨ 基于 **[Avalonia](https://github.com/AvaloniaUI/Avalonia)** 的 **[MAAFra
   ```
    "focus": "测试"
   ```
-  等同于
+  동일함
   ```
   "focus": {
     "start": "测试"
   }
     ```
-## 许可证
+## 라이선스
 
-**MFAAvalonia** 使用 **[GPL-3.0 许可证](./LICENSE)** 开源。
-
-## 致谢
-
-### 开源项目
-
-- **[SukiUI](https://github.com/kikipoulet/SukiUI)**\
-  A Desktop UI Library for Avalonia.
-- **[MaaFramework](https://github.com/MaaAssistantArknights/MaaFramework)**\
-  基于图像识别的自动化黑盒测试框架。
-- **[Serilog](https://github.com/serilog/serilog)**\
-  C# 日志记录库
-- **[Newtonsoft.Json](https://github.com/CommunityToolkit/dotnet)**\
-  C# JSON 库
-- **[MirrorChyan](https://github.com/MirrorChyan/docs)**\
-  Mirror酱更新服务
-- **[AvaloniaExtensions.Axaml](https://github.com/dotnet9/AvaloniaExtensions)**\
-  为Avalonia UI开发带来便利的语法糖库
-- **[CalcBindingAva](https://github.com/netwww1/CalcBindingAva)**\
-  CalcBinding is an advanced Binding markup extension that allows you to write calculated binding expressions in xaml, without custom converter
-
-### 开发者
-
-感谢所有为 **MFAAvalonia** 做出贡献的开发者。
-
-<a href="https://github.com/SweetSmellFox/MFAAvalonia/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=SweetSmellFox/MFAAvalonia&max=1000" alt="Contributors to MFAAvalonia"/>
-</a>
+**MFAAvalonia-ko**는 **[GPL-3.0 라이선스](./LICENSE)**로 오픈소스화되어 있습니다.
