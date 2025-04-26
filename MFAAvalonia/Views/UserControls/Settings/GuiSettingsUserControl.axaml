@@ -1,0 +1,218 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="MFAAvalonia.Views.UserControls.Settings.GuiSettingsUserControl"
+    x:DataType="settings:GuiSettingsUserControlModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:calcBinding="clr-namespace:CalcBinding;assembly=CalcBindingAva"
+    xmlns:controls="clr-namespace:MFAAvalonia.Views.UserControls.Settings"
+    xmlns:converters="clr-namespace:MFAAvalonia.Helper.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:extensions="clr-namespace:MFAAvalonia.Extensions"
+    xmlns:helper="clr-namespace:MFAAvalonia.Helper"
+    xmlns:markup="https://codewf.com"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:other="clr-namespace:MFAAvalonia.ViewModels.Other"
+    xmlns:settings="clr-namespace:MFAAvalonia.ViewModels.UsersControls.Settings"
+    xmlns:suki="https://github.com/kikipoulet/SukiUI"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <StackPanel
+            HorizontalAlignment="Center"
+            Orientation="Horizontal"
+            Spacing="20">
+            <RadioButton
+                Classes="GigaChips"
+                GroupName="RadioBaseTheme"
+                Height="160"
+                IsChecked="{Binding BaseTheme, Converter={converters:UniversalEqualityConverter}, ConverterParameter={x:Static ThemeVariant.Light}, Mode=TwoWay}"
+                Padding="0"
+                Tag="Light"
+                Width="215">
+                <Border
+                    Background="#fafafa"
+                    CornerRadius="{DynamicResource MediumCornerRadius}"
+                    Margin="-50">
+                    <Grid>
+                        <TextBlock
+                            FontWeight="DemiBold"
+                            Foreground="#555555"
+                            HorizontalAlignment="Center"
+                            Margin="58,42,42,42"
+                            Text="{markup:I18n {x:Static helper:LangKeys.LightColor}}"
+                            VerticalAlignment="Bottom" />
+                    </Grid>
+                </Border>
+            </RadioButton>
+
+            <RadioButton
+                Classes="GigaChips"
+                GroupName="RadioBaseTheme"
+                Height="160"
+                IsChecked="{Binding BaseTheme, Converter={converters:UniversalEqualityConverter}, ConverterParameter={x:Static ThemeVariant.Dark}, Mode=TwoWay}"
+                Tag="Dark"
+                Width="215">
+                <Border
+                    Background="#222222"
+                    CornerRadius="{DynamicResource MediumCornerRadius}"
+                    Margin="-50">
+                    <Grid>
+                        <TextBlock
+                            FontWeight="DemiBold"
+                            Foreground="#fafafa"
+                            HorizontalAlignment="Center"
+                            Margin="58,42,42,42"
+                            Text="{markup:I18n {x:Static helper:LangKeys.DarkColor}}"
+                            VerticalAlignment="Bottom" />
+                    </Grid>
+                </Border>
+            </RadioButton>
+        </StackPanel>
+        <ItemsControl
+            HorizontalAlignment="Center"
+            ItemsSource="{Binding ThemeItems}"
+            Margin="25">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal"
+                        Spacing="10" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="other:ThemeItemViewModel">
+                    <RadioButton
+                        Classes="GigaChips"
+                        CornerRadius="50"
+                        GroupName="RadioColorTheme"
+                        Height="50"
+                        IsChecked="{Binding IsSelected}"
+                        Width="50">
+                        <Border
+                            Background="{Binding Theme.PrimaryBrush}"
+                            CornerRadius="50"
+                            Margin="-30" />
+                    </RadioButton>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <suki:GlassCard Margin="0,25,0,0" Padding="25">
+            <StackPanel Spacing="20">
+                <DockPanel>
+                    <Button
+                        Command="{Binding CreateCustomThemeCommand}"
+                        Content="{markup:I18n {x:Static helper:LangKeys.Custom}}"
+                        DockPanel.Dock="Right"
+                        Height="40"
+                        Margin="0,0,4,0"
+                        Width="205" />
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="DemiBold"
+                            Text="{markup:I18n {x:Static helper:LangKeys.CreateCustomTheme}}" />
+                        <TextBlock
+                            Foreground="{DynamicResource SukiLowText}"
+                            Margin="0,12,70,0"
+                            Text="{markup:I18n {x:Static helper:LangKeys.ConfigurePrimaryAccent}}"
+                            TextWrapping="Wrap" />
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel>
+                    <ComboBox extensions:ComboBoxExtensions.DisableNavigationOnLostFocus="True"
+                              DockPanel.Dock="Right"
+                              ItemsSource="{Binding AvailableBackgroundStyles}"
+                              SelectedValue="{Binding BackgroundStyle}"
+                              Width="215" />
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            Text="{markup:I18n {x:Static helper:LangKeys.BackgroundStyleTitle}}" />
+                        <TextBlock
+                            Foreground="{DynamicResource SukiLowText}"
+                            Margin="0,12,70,0"
+                            Text="{markup:I18n {x:Static helper:LangKeys.BackgroundStyleDescription}}"
+                            TextWrapping="Wrap" />
+                    </StackPanel>
+                </DockPanel>
+
+                <DockPanel>
+                    <ToggleSwitch
+                        Classes="Switch"
+                        DockPanel.Dock="Right"
+                        IsChecked="{Binding BackgroundAnimations}"
+                        VerticalAlignment="Top" />
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="DemiBold"
+                            Text="{markup:I18n {x:Static helper:LangKeys.AnimatedBackgroundTitle}}" />
+                        <TextBlock
+                            Foreground="{DynamicResource SukiLowText}"
+                            Margin="0,12,70,0"
+                            Text="{markup:I18n {x:Static helper:LangKeys.AnimatedBackgroundDescription}}"
+                            TextWrapping="Wrap" />
+                    </StackPanel>
+                </DockPanel>
+
+                <DockPanel>
+                    <ToggleSwitch
+                        DockPanel.Dock="Right"
+                        IsChecked="{Binding BackgroundTransitions}"
+                        VerticalAlignment="Top" />
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="DemiBold"
+                            Text="{markup:I18n {x:Static helper:LangKeys.BackgroundTransitionsTitle}}" />
+                        <TextBlock
+                            Foreground="{DynamicResource SukiLowText}"
+                            Margin="0,12,70,0"
+                            Text="{markup:I18n {x:Static helper:LangKeys.BackgroundTransitionsDescription}}"
+                            TextWrapping="Wrap" />
+                    </StackPanel>
+                </DockPanel>
+            </StackPanel>
+        </suki:GlassCard>
+        <suki:GlassCard Margin="0,25,0,0" Padding="25">
+            <DockPanel>
+                <ComboBox extensions:ComboBoxExtensions.DisableNavigationOnLostFocus="True"
+                          DisplayMemberBinding="{Binding Name}"
+                          DockPanel.Dock="Right"
+                          ItemsSource="{Binding SupportedLanguages}"
+                          SelectedValue="{Binding CurrentLanguage}"
+                          SelectedValueBinding="{Binding Key}"
+                          Width="215" />
+                <StackPanel HorizontalAlignment="Left">
+                    <TextBlock
+                        FontSize="16"
+                        FontWeight="DemiBold"
+                        Text="{markup:I18n {x:Static helper:LangKeys.LanguageOption}}" />
+                    <TextBlock
+                        Foreground="{DynamicResource SukiLowText}"
+                        Margin="0,12,70,0"
+                        Text="{markup:I18n {x:Static helper:LangKeys.LanguageOptionDescription}}"
+                        TextWrapping="Wrap" />
+                </StackPanel>
+            </DockPanel>
+        </suki:GlassCard>
+        <suki:GlassCard Margin="0,25,0,0" Padding="25">
+            <DockPanel>
+                <ToggleSwitch
+                    Classes="Switch"
+                    DockPanel.Dock="Right"
+                    IsChecked="{Binding ShouldMinimizeToTray}"
+                    VerticalAlignment="Top" />
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        Text="{markup:I18n {x:Static helper:LangKeys.MinimizeToTray}}" />
+                </StackPanel>
+            </DockPanel>
+        </suki:GlassCard>
+    </StackPanel>
+</UserControl>
