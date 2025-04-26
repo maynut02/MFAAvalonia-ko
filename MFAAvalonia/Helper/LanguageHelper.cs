@@ -32,7 +32,7 @@ public static class LanguageHelper
 
     public static SupportedLanguage GetLanguage(string key)
     {
-        return SupportedLanguages.FirstOrDefault(lang => lang.Key == key, SupportedLanguages[0]);
+        return SupportedLanguages.FirstOrDefault(lang => lang.Key == key, SupportedLanguages[3]);
     }
 
     public static void ChangeLanguage(SupportedLanguage language)
