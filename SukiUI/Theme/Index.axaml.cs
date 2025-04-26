@@ -278,6 +278,9 @@ public partial class SukiTheme : Styles
         },
         {
             "zh-Hans", new zh_hans()
+        },
+        {
+            "ko-kr", new ko_kr()
         }
     };
 

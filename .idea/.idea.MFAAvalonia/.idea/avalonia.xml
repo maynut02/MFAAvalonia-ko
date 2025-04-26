@@ -51,6 +51,7 @@
         <entry key="SukiUI/Controls/SukiToast.axaml" value="MFAAvalonia/MFAAvalonia.csproj" />
         <entry key="SukiUI/Controls/SukiWindow.axaml" value="MFAAvalonia/MFAAvalonia.csproj" />
         <entry key="SukiUI/Controls/WaveProgress.axaml" value="MFAAvalonia/MFAAvalonia.csproj" />
+        <entry key="SukiUI/Locale/ko-kr.axaml" value="MFAAvalonia/MFAAvalonia.csproj" />
         <entry key="SukiUI/Locale/en-us.axaml" value="MFAAvalonia/MFAAvalonia.csproj" />
         <entry key="SukiUI/Locale/zh-cn.axaml" value="MFAAvalonia/MFAAvalonia.csproj" />
         <entry key="SukiUI/Locale/zh-hans.axaml" value="MFAAvalonia/MFAAvalonia.csproj" />

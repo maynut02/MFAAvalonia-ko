@@ -114,6 +114,10 @@
             <DependentUpon>en-us.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Compile Update="Locale\ko-kr.axaml.cs">
+            <DependentUpon>ko-kr.axaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
         <Compile Update="Controls\Settings\SettingsLayout.axaml.cs">
             <DependentUpon>SettingsLayout.axaml</DependentUpon>
             <SubType>Code</SubType>
