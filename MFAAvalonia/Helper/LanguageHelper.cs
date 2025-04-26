@@ -22,17 +22,17 @@ public static class LanguageHelper
 
     public static readonly List<SupportedLanguage> SupportedLanguages =
     [
+        new("ko-kr", "한국어"),
         new("zh-hans", "简体中文"),
         new("zh-hant", "繁體中文"),
         new("en-us", "English"),
-        new("ko-kr", "한국어"),
     ];
 
     public static Dictionary<string, CultureInfo> Cultures { get; } = new() {};
 
     public static SupportedLanguage GetLanguage(string key)
     {
-        return SupportedLanguages.FirstOrDefault(lang => lang.Key == key, SupportedLanguages[3]);
+        return SupportedLanguages.FirstOrDefault(lang => lang.Key == key, SupportedLanguages[0]);
     }
 
     public static void ChangeLanguage(SupportedLanguage language)
