@@ -169,4 +169,4 @@ controller의 수량을 통해 제어 잠금을 할 수 있으며 controller[0]�
 
 ## 라이선스
 
-**MFAAvalonia-ko**는 **[GPL-3.0 라이선스](./LICENSE)**로 오픈소스화되어 있습니다.
+**MFAAvalonia-ko** 는 **[GPL-3.0 라이선스](./LICENSE)**로 오픈소스화되어 있습니다.
