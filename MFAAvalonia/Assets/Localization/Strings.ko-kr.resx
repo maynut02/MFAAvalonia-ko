@@ -12,859 +12,859 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="About" xml:space="preserve">
-        <value>About Us</value>
+        <value>정보</value>
     </data>
     <data name="AdbCaptureMode" xml:space="preserve">
-        <value>Capture Mode:</value>
+        <value>캡처 모드:</value>
     </data>
     <data name="AdbConfig" xml:space="preserve">
-        <value>Extras</value>
+        <value>추가 설정</value>
     </data>
     <data name="AdbEditor" xml:space="preserve">
-        <value>Adb Editor</value>
+        <value>Adb 편집기</value>
     </data>
     <data name="AdbInput" xml:space="preserve">
-        <value>AdbInput (Not Recommended)</value>
+        <value>Adb 입력 (권장하지 않음)</value>
     </data>
     <data name="AdbInputMode" xml:space="preserve">
-        <value>Input Mode:</value>
+        <value>입력 모드:</value>
     </data>
     <data name="AdbName" xml:space="preserve">
-        <value>Adb Name</value>
+        <value>Adb 이름</value>
     </data>
     <data name="AdbPath" xml:space="preserve">
-        <value>Adb Path</value>
+        <value>Adb 경로</value>
     </data>
     <data name="AdbSerial" xml:space="preserve">
-        <value>Adb Address</value>
+        <value>Adb 주소</value>
     </data>
     <data name="AddAbove" xml:space="preserve">
-        <value>Add Above</value>
+        <value>위에 추가</value>
     </data>
     <data name="AddBelow" xml:space="preserve">
-        <value>Add below</value>
+        <value>아래에 추가</value>
     </data>
     <data name="AddConfiguration" xml:space="preserve">
-        <value>Add</value>
+        <value>추가</value>
     </data>
     <data name="AddTask" xml:space="preserve">
-        <value>Add Task</value>
+        <value>작업 추가</value>
     </data>
     <data name="AdvancedSetting" xml:space="preserve">
-        <value>Advanced</value>
+        <value>고급</value>
     </data>
     <data name="AfterTaskOption" xml:space="preserve">
-        <value>Post-task Actions</value>
+        <value>작업 후 동작</value>
     </data>
     <data name="AllFilter" xml:space="preserve">
-        <value>All Files</value>
+        <value>모든 파일</value>
     </data>
     <data name="AllowAdbHardRestart" xml:space="preserve">
-        <value>Attempt to kill and restart ADB process after connection failure</value>
+        <value>연결 실패 후 ADB 프로세스를 강제로 종료 및 재시작 시도</value>
     </data>
     <data name="AllowAdbRestart" xml:space="preserve">
-        <value>Attempt to restart ADB Server after connection failure</value>
+        <value>연결 실패 후 ADB 서버 재시작 시도</value>
     </data>
     <data name="AnimatedBackgroundDescription" xml:space="preserve">
-        <value>Enable/disable background animations, which are driven by the currently active effect.</value>
+        <value>현재 활성화된 효과에 따라 배경 애니메이션을 활성화/비활성화합니다.</value>
     </data>
     <data name="AnimatedBackgroundTitle" xml:space="preserve">
-        <value>Animated Background</value>
+        <value>애니메이션 배경</value>
     </data>
     <data name="Announcement" xml:space="preserve">
-        <value>Announcement</value>
+        <value>공지사항</value>
     </data>
     <data name="ApplyControllerType" xml:space="preserve">
-        <value>Select the Controller Type to Apply</value>
+        <value>적용할 컨트롤러 유형 선택</value>
     </data>
     <data name="ApplyingUpdate" xml:space="preserve">
-        <value>Applying update...</value>
+        <value>업데이트 적용 중...</value>
     </data>
     <data name="AppTitle" xml:space="preserve">
-        <value>MFA Task Manager</value>
+        <value>MFA 작업 관리자</value>
     </data>
     <data name="AutoDetect" xml:space="preserve">
-        <value>AutoDetect (Automatic Detection)</value>
+        <value>자동 감지</value>
     </data>
     <data name="AutomaticDetectionUpdate" xml:space="preserve">
-        <value>Automatic Detection Update</value>
+        <value>자동 감지 업데이트</value>
     </data>
     <data name="AutomaticHide" xml:space="preserve">
-        <value>Auto Hide after launched</value>
+        <value>실행 후 자동 숨김</value>
     </data>
     <data name="AutomaticMinimize" xml:space="preserve">
-        <value>Auto Minimize after launched</value>
+        <value>실행 후 자동 최소화</value>
     </data>
     <data name="AutomaticUpdateMFA" xml:space="preserve">
-        <value>Automatic Software Update</value>
+        <value>소프트웨어 자동 업데이트</value>
     </data>
     <data name="AutomaticUpdateResource" xml:space="preserve">
-        <value>Automatic Resource Update</value>
+        <value>리소스 자동 업데이트</value>
     </data>
     <data name="AutoStartOption" xml:space="preserve">
-        <value>Post-start operation</value>
+        <value>시작 후 동작</value>
     </data>
     <data name="BackgroundStyleDescription" xml:space="preserve">
-        <value>Select from the built-in background styles.</value>
+        <value>내장된 배경 스타일 중에서 선택합니다.</value>
     </data>
     <data name="BackgroundStyleTitle" xml:space="preserve">
-        <value>Background Style</value>
+        <value>배경 스타일</value>
     </data>
     <data name="BackgroundTransitionsDescription" xml:space="preserve">
-        <value>Enable/disable background transitions with smooth fading effects when changing styles.</value>
+        <value>스타일 변경 시 부드러운 페이드 효과로 배경 전환을 활성화/비활성화합니다.</value>
     </data>
     <data name="BackgroundTransitionsTitle" xml:space="preserve">
-        <value>Background Transitions</value>
+        <value>배경 전환</value>
     </data>
     <data name="BaseTheme" xml:space="preserve">
-        <value>Basic Theme</value>
+        <value>기본 테마</value>
     </data>
     <data name="BlueStacks" xml:space="preserve">
         <value>BlueStacks</value>
     </data>
     <data name="ButtonAdd" xml:space="preserve">
-        <value>Add</value>
+        <value>추가</value>
     </data>
     <data name="ButtonCancel" xml:space="preserve">
-        <value>Cancel</value>
+        <value>취소</value>
     </data>
     <data name="ButtonClear" xml:space="preserve">
-        <value>Clear</value>
+        <value>지우기</value>
     </data>
     <data name="ButtonClose" xml:space="preserve">
-        <value>Close</value>
+        <value>닫기</value>
     </data>
     <data name="ButtonSave" xml:space="preserve">
-        <value>Save</value>
+        <value>저장</value>
     </data>
     <data name="CannotStart" xml:space="preserve">
-        <value>Unable to start task</value>
+        <value>작업을 시작할 수 없습니다</value>
     </data>
     <data name="CaptureModeOption" xml:space="preserve">
-        <value>Capture Mode</value>
+        <value>캡처 모드</value>
     </data>
     <data name="CheckMFA" xml:space="preserve">
-        <value>Check Software</value>
+        <value>소프트웨어 확인</value>
     </data>
     <data name="CheckResource" xml:space="preserve">
-        <value>Check resources</value>
+        <value>리소스 확인</value>
     </data>
     <data name="ClipboardDataError" xml:space="preserve">
-        <value>The data currently in the clipboard cannot be converted to text.</value>
+        <value>현재 클립보드에 있는 데이터를 텍스트로 변환할 수 없습니다.</value>
     </data>
     <data name="CloseEmulator" xml:space="preserve">
-        <value>Disable Software</value>
+        <value>소프트웨어 비활성화</value>
     </data>
     <data name="CloseEmulatorAndMFA" xml:space="preserve">
-        <value>Disable MFA and Software</value>
+        <value>MFA 및 소프트웨어 비활성화</value>
     </data>
     <data name="CloseEmulatorAndRestartMFA" xml:space="preserve">
-        <value>Disable MFA and Restart Software</value>
+        <value>MFA 비활성화 및 소프트웨어 재시작</value>
     </data>
     <data name="CloseMFA" xml:space="preserve">
-        <value>Disable MFA</value>
+        <value>MFA 비활성화</value>
     </data>
     <data name="ColorPickerTitle" xml:space="preserve">
-        <value>Color Picker</value>
+        <value>색상 선택기</value>
     </data>
     <data name="ColorTheme" xml:space="preserve">
-        <value>Color Theme</value>
+        <value>색상 테마</value>
     </data>
     <data name="CommonSetting" xml:space="preserve">
-        <value> Common </value>
+        <value>일반</value>
     </data>
     <data name="ConfigAddedSuccessfully" xml:space="preserve">
-        <value>Configuration &lt;{0}&gt; added successfully!</value>
+        <value>구성 &lt;{0}&gt;이(가) 성공적으로 추가되었습니다!</value>
     </data>
     <data name="ConfigNameAlreadyExists" xml:space="preserve">
-        <value>Configuration name &lt;{0}&gt; already exists!</value>
+        <value>구성 이름 &lt;{0}&gt;이(가) 이미 존재합니다!</value>
     </data>
     <data name="ConfigNameCannotBeEmpty" xml:space="preserve">
-        <value>Configuration name cannot be empty!</value>
+        <value>구성 이름은 비워둘 수 없습니다!</value>
     </data>
     <data name="ConfigurationName" xml:space="preserve">
-        <value>Config</value>
+        <value>구성</value>
     </data>
     <data name="Confirm" xml:space="preserve">
-        <value>Confirm</value>
+        <value>확인</value>
     </data>
     <data name="ConfirmExitText" xml:space="preserve">
-        <value>Are you sure want to exit?</value>
+        <value>정말 종료하시겠습니까?</value>
     </data>
     <data name="ConfirmExitTitle" xml:space="preserve">
-        <value>MFA is running tasks</value>
+        <value>MFA가 작업을 실행 중입니다</value>
     </data>
     <data name="Connected" xml:space="preserve">
-        <value>Connected</value>
+        <value>연결됨</value>
     </data>
     <data name="ConnectFailed" xml:space="preserve">
-        <value>Connection failure</value>
+        <value>연결 실패</value>
     </data>
     <data name="ConnectingEmulatorOrWindow" xml:space="preserve">
-        <value>Error connecting to {0}!</value>
+        <value>{0}에 연결하는 중 오류 발생!</value>
     </data>
     <data name="ConnectingTo" xml:space="preserve">
-        <value>Connecting to {0}......</value>
+        <value>{0}에 연결 중......</value>
     </data>
     <data name="Connection" xml:space="preserve">
-        <value>Connection</value>
+        <value>연결</value>
     </data>
     <data name="ConnectionSettings" xml:space="preserve">
-        <value>Connection</value>
+        <value>연결</value>
     </data>
     <data name="ControllerType" xml:space="preserve">
-        <value>Controller Type</value>
+        <value>컨트롤러 유형</value>
     </data>
     <data name="CopiedToClipboard" xml:space="preserve">
-        <value>Copied to Clipboard</value>
+        <value>클립보드에 복사됨</value>
     </data>
     <data name="Copy" xml:space="preserve">
-        <value>Copy</value>
+        <value>복사</value>
     </data>
     <data name="CopyErrorMessage" xml:space="preserve">
-        <value>Copy error message</value>
+        <value>오류 메시지 복사</value>
     </data>
     <data name="CopyKey" xml:space="preserve">
-        <value>Copy Key</value>
+        <value>키 복사</value>
     </data>
     <data name="CopyValue" xml:space="preserve">
-        <value>Copy Value</value>
+        <value>값 복사</value>
     </data>
     <data name="CurrentController" xml:space="preserve">
-        <value>Current Controller</value>
+        <value>현재 컨트롤러</value>
     </data>
     <data name="CurrentResourcesNotSupportGitHub" xml:space="preserve">
-        <value>The current resources do not support GitHub.</value>
+        <value>현재 리소스는 GitHub를 지원하지 않습니다.</value>
     </data>
     <data name="CurrentResourcesNotSupportMirror" xml:space="preserve">
-        <value>The current resources do not support Mirror Chyan.</value>
+        <value>현재 리소스는 Mirror Chyan을 지원하지 않습니다.</value>
     </data>
     <data name="Custom" xml:space="preserve">
-        <value>Custom</value>
+        <value>사용자 정의</value>
     </data>
     <data name="Cut" xml:space="preserve">
-        <value>Cut</value>
+        <value>잘라내기</value>
     </data>
     <data name="DarkColor" xml:space="preserve">
-        <value>Dark color</value>
+        <value>어두운 색상</value>
     </data>
     <data name="DebugMode" xml:space="preserve">
-        <value>[Debug mode]</value>
+        <value>[디버그 모드]</value>
     </data>
     <data name="DebugModeWarning" xml:space="preserve">
-        <value>Debug mode has been enabled. This mode will save screenshots, operation data, and image recognition visualization results during operation, which may occupy a large amount of storage space!</value>
+        <value>디버그 모드가 활성화되었습니다. 이 모드는 작업 중 스크린샷, 작업 데이터 및 이미지 인식 시각화 결과를 저장하며, 많은 저장 공간을 차지할 수 있습니다!</value>
     </data>
     <data name="Delete" xml:space="preserve">
-        <value>Delete</value>
+        <value>삭제</value>
     </data>
     <data name="DeselectAll" xml:space="preserve">
-        <value>Deselect All</value>
+        <value>모두 선택 해제</value>
     </data>
     <data name="DingTalk" xml:space="preserve">
         <value>DingTalk</value>
     </data>
     <data name="DingTalkMessageAsync" xml:space="preserve">
-        <value>DingTalk group message notification</value>
+        <value>DingTalk 그룹 메시지 알림</value>
     </data>
     <data name="DownloadFailed" xml:space="preserve">
-        <value>Download of Update Package Failed</value>
+        <value>업데이트 패키지 다운로드 실패</value>
     </data>
     <data name="Downloading" xml:space="preserve">
-        <value>Downloading…</value>
+        <value>다운로드 중…</value>
     </data>
     <data name="DuplicateTaskError" xml:space="preserve">
-        <value>Duplicate task name found in Pipeline file: "{0}"!</value>
+        <value>Pipeline 파일에서 중복된 작업 이름 발견: "{0}"!</value>
     </data>
     <data name="DuplicateTaskNameError" xml:space="preserve">
-        <value>A task with the name "{0}" already exists in the task list.</value>
+        <value>작업 목록에 이름이 "{0}"인 작업이 이미 존재합니다.</value>
     </data>
     <data name="Edit" xml:space="preserve">
-        <value>Edit</value>
+        <value>편집</value>
     </data>
     <data name="EditAttributeDialogTitle" xml:space="preserve">
-        <value>Attribute Editor</value>
+        <value>속성 편집기</value>
     </data>
     <data name="EditControllerConfiguration" xml:space="preserve">
-        <value>Edit Controller Configuration</value>
+        <value>컨트롤러 구성 편집</value>
     </data>
     <data name="EditTask" xml:space="preserve">
-        <value>Edit Task</value>
+        <value>작업 편집</value>
     </data>
     <data name="EditTaskDialog_AddAttribute_Tooltip" xml:space="preserve">
-        <value>Add Attribute</value>
+        <value>속성 추가</value>
     </data>
     <data name="EditTaskDialog_ClearAttribute_Tooltip" xml:space="preserve">
-        <value>Clear Attributes</value>
+        <value>속성 지우기</value>
     </data>
     <data name="EditTaskDialog_ClearTask_Tooltip" xml:space="preserve">
-        <value>Clear Tasks</value>
+        <value>작업 지우기</value>
     </data>
     <data name="EditTaskDialog_ColorExtraction_Tooltip" xml:space="preserve">
-        <value>Color Extraction</value>
+        <value>색상 추출</value>
     </data>
     <data name="EditTaskDialog_Header" xml:space="preserve">
-        <value>Task Editor</value>
+        <value>작업 편집기</value>
     </data>
     <data name="EditTaskDialog_Load_Tooltip" xml:space="preserve">
-        <value>Load Pipeline File</value>
+        <value>파이프라인 파일 불러오기</value>
     </data>
     <data name="EditTaskDialog_PipelineFileName_Placeholder" xml:space="preserve">
-        <value>Pipeline File Name</value>
+        <value>파이프라인 파일 이름</value>
     </data>
     <data name="EditTaskDialog_RecognitionText_Tooltip" xml:space="preserve">
-        <value>Text Recognition</value>
+        <value>텍스트 인식</value>
     </data>
     <data name="EditTaskDialog_SavePipeline_Tooltip" xml:space="preserve">
-        <value>Save Pipeline File</value>
+        <value>파이프라인 파일 저장</value>
     </data>
     <data name="EditTaskDialog_SaveTask_Button" xml:space="preserve">
-        <value>Save Task Name</value>
+        <value>작업 이름 저장</value>
     </data>
     <data name="EditTaskDialog_Screenshot_Tooltip" xml:space="preserve">
-        <value>Take Screenshot</value>
+        <value>스크린샷 찍기</value>
     </data>
     <data name="EditTaskDialog_SelectionRegion_Tooltip" xml:space="preserve">
-        <value>Select Region</value>
+        <value>영역 선택</value>
     </data>
     <data name="EditTaskDialog_ShowChart_Button" xml:space="preserve">
-        <value>Flowchart</value>
+        <value>플로우차트</value>
     </data>
     <data name="EditTaskDialog_Swipe_Tooltip" xml:space="preserve">
-        <value>Swipe</value>
+        <value>스와이프</value>
     </data>
     <data name="EditTaskDialog_TaskName_Title" xml:space="preserve">
-        <value>Task Name:</value>
+        <value>작업 이름:</value>
     </data>
     <data name="EditTaskDialog_Title" xml:space="preserve">
-        <value>Task Editor</value>
+        <value>작업 편집기</value>
     </data>
     <data name="EditTaskTooltip" xml:space="preserve">
-        <value>Edit Task</value>
+        <value>작업 편집</value>
     </data>
     <data name="Email" xml:space="preserve">
-        <value>Email</value>
+        <value>이메일</value>
     </data>
     <data name="Emulator" xml:space="preserve">
-        <value>Emulator</value>
+        <value>에뮬레이터</value>
     </data>
     <data name="EmulatorDetectionStarted" xml:space="preserve">
-        <value>Starting emulator search!</value>
+        <value>에뮬레이터 검색 시작!</value>
     </data>
     <data name="EmulatorExtras" xml:space="preserve">
-        <value>EmulatorExtras (Specialized) </value>
+        <value>에뮬레이터 추가 기능 (전문)</value>
     </data>
     <data name="EmulatorSelectionMessage" xml:space="preserve">
-        <value>Emulator selected: {0}</value>
+        <value>선택된 에뮬레이터: {0}</value>
     </data>
     <data name="EnableRecording" xml:space="preserve">
-        <value>Enable video recording (for debugging)</value>
+        <value>비디오 녹화 활성화 (디버깅용)</value>
     </data>
     <data name="EnableSaveDraw" xml:space="preserve">
-        <value>Enable save draw (for debugging)</value>
+        <value>그리기 저장 활성화 (디버깅용)</value>
     </data>
     <data name="EnterTaskName" xml:space="preserve">
-        <value>Please enter a task name</value>
+        <value>작업 이름을 입력하세요</value>
     </data>
     <data name="Error" xml:space="preserve">
-        <value>Error</value>
+        <value>오류</value>
     </data>
     <data name="ErrorDetails" xml:space="preserve">
-        <value>Details</value>
+        <value>세부 정보</value>
     </data>
     <data name="ErrorFeedbackLinkText" xml:space="preserve">
-        <value>Create a GitHub issue</value>
+        <value>GitHub 이슈 생성</value>
     </data>
     <data name="ErrorProlog" xml:space="preserve">
-        <value>MFA has encountered an error</value>
+        <value>MFA에서 오류가 발생했습니다</value>
     </data>
     <data name="ExeFilter" xml:space="preserve">
-        <value>Executable files</value>
+        <value>실행 파일</value>
     </data>
     <data name="ExternalNotificationBotToken" xml:space="preserve">
-        <value>Bot Token</value>
+        <value>봇 토큰</value>
     </data>
     <data name="ExternalNotificationDingTalkSecret" xml:space="preserve">
-        <value>DingTalk Secret</value>
+        <value>DingTalk 비밀키</value>
     </data>
     <data name="ExternalNotificationDingTalkToken" xml:space="preserve">
-        <value>DingTalk Token</value>
+        <value>DingTalk 토큰</value>
     </data>
     <data name="ExternalNotificationDiscordChannelId" xml:space="preserve">
-        <value>Channel ID</value>
+        <value>채널 ID</value>
     </data>
     <data name="ExternalNotificationDiscordUserId" xml:space="preserve">
-        <value>User ID</value>
+        <value>사용자 ID</value>
     </data>
     <data name="ExternalNotificationDiscordWebhookName" xml:space="preserve">
-        <value>Webhook Name</value>
+        <value>웹훅 이름</value>
     </data>
     <data name="ExternalNotificationEmailAccount" xml:space="preserve">
-        <value>Email Account</value>
+        <value>이메일 계정</value>
     </data>
     <data name="ExternalNotificationEmailSecret" xml:space="preserve">
-        <value>Email Secret</value>
+        <value>이메일 비밀키</value>
     </data>
     <data name="ExternalNotificationEnabled" xml:space="preserve">
-        <value>Enabled configuration</value>
+        <value>구성 활성화</value>
     </data>
     <data name="ExternalNotificationLarkID" xml:space="preserve">
         <value>Lark ID</value>
     </data>
     <data name="ExternalNotificationQmsgBot" xml:space="preserve">
-        <value>Bot QQ</value>
+        <value>봇 QQ</value>
     </data>
     <data name="ExternalNotificationQmsgKey" xml:space="preserve">
-        <value>Qmsg Key</value>
+        <value>Qmsg 키</value>
     </data>
     <data name="ExternalNotificationQmsgServer" xml:space="preserve">
-        <value>Qmsg Server</value>
+        <value>Qmsg 서버</value>
     </data>
     <data name="ExternalNotificationQmsgUser" xml:space="preserve">
-        <value>User QQ</value>
+        <value>사용자 QQ</value>
     </data>
     <data name="ExternalNotificationSendTest" xml:space="preserve">
-        <value>Send Test</value>
+        <value>테스트 전송</value>
     </data>
     <data name="ExternalNotificationSettings" xml:space="preserve">
-        <value>External notifications</value>
+        <value>외부 알림</value>
     </data>
     <data name="ExternalNotificationSmtpAuth" xml:space="preserve">
-        <value>Authentication Required</value>
+        <value>인증 필요</value>
     </data>
     <data name="ExternalNotificationSmtpFrom" xml:space="preserve">
-        <value>Sender</value>
+        <value>발신자</value>
     </data>
     <data name="ExternalNotificationSmtpPassword" xml:space="preserve">
-        <value>Password</value>
+        <value>비밀번호</value>
     </data>
     <data name="ExternalNotificationSmtpPort" xml:space="preserve">
-        <value>Port</value>
+        <value>포트</value>
     </data>
     <data name="ExternalNotificationSmtpServer" xml:space="preserve">
-        <value>SMTP Server</value>
+        <value>SMTP 서버</value>
     </data>
     <data name="ExternalNotificationSmtpSsl" xml:space="preserve">
-        <value>Use SSL</value>
+        <value>SSL 사용</value>
     </data>
     <data name="ExternalNotificationSmtpTo" xml:space="preserve">
-        <value>Recipient</value>
+        <value>수신자</value>
     </data>
     <data name="ExternalNotificationSmtpUser" xml:space="preserve">
-        <value>Username</value>
+        <value>사용자 이름</value>
     </data>
     <data name="ExternalNotificationTelegramChatId" xml:space="preserve">
-        <value>Chat ID</value>
+        <value>채팅 ID</value>
     </data>
     <data name="ExternalNotificationTips" xml:space="preserve">
-        <value>Please note: The external notification feature currently only sends 「All tasks completed」 notifications.</value>
+        <value>참고: 외부 알림 기능은 현재 「모든 작업 완료」 알림만 전송합니다.</value>
     </data>
     <data name="ExternalNotificationWebhookUrl" xml:space="preserve">
-        <value>Webhook Url</value>
+        <value>웹훅 URL</value>
     </data>
     <data name="ExternalNotificationWxPusherUID" xml:space="preserve">
-        <value>User UID</value>
+        <value>사용자 UID</value>
     </data>
     <data name="FailToGetCurrentVersionInfo" xml:space="preserve">
-        <value>Failed to get the current version information and cannot update.</value>
+        <value>현재 버전 정보를 가져오지 못해 업데이트할 수 없습니다.</value>
     </data>
     <data name="FailToGetDownloadUrl" xml:space="preserve">
-        <value>Unable to get the resource download link, update failed.</value>
+        <value>리소스 다운로드 링크를 가져올 수 없어 업데이트에 실패했습니다.</value>
     </data>
     <data name="FailToGetLatestVersionInfo" xml:space="preserve">
-        <value>Failed to get the latest version information</value>
+        <value>최신 버전 정보를 가져오지 못했습니다</value>
     </data>
     <data name="FollowingSystem" xml:space="preserve">
-        <value>Following System</value>
+        <value>시스템 따라가기</value>
     </data>
     <data name="ForceScheduledStart" xml:space="preserve">
-        <value>Force scheduled start</value>
+        <value>예약 시작 강제 실행</value>
     </data>
     <data name="ForceScheduledStartTip" xml:space="preserve">
-        <value>Stop current task, restart game and start new tasks</value>
+        <value>현재 작업 중지, 게임 재시작 및 새 작업 시작</value>
     </data>
     <data name="GameResourceUpdated" xml:space="preserve">
-        <value>Game resources updated, please restart software.</value>
+        <value>게임 리소스가 업데이트되었습니다. 소프트웨어를 재시작하세요.</value>
     </data>
     <data name="General" xml:space="preserve">
-        <value>General Mode</value>
+        <value>일반 모드</value>
     </data>
     <data name="GettingLatestMaaFW" xml:space="preserve">
-        <value>Getting the latest maafw...</value>
+        <value>최신 MaaFW 가져오는 중...</value>
     </data>
     <data name="GettingLatestResources" xml:space="preserve">
-        <value>Getting the latest resources...</value>
+        <value>최신 리소스 가져오는 중...</value>
     </data>
     <data name="GettingLatestSoftware" xml:space="preserve">
-        <value>Getting the latest software...</value>
+        <value>최신 소프트웨어 가져오는 중...</value>
     </data>
     <data name="Github" xml:space="preserve">
-        <value>Source code: GitHub</value>
+        <value>소스 코드: GitHub</value>
     </data>
     <data name="GlobalConfigTip" xml:space="preserve">
-        <value>This option page is for global config</value>
+        <value>이 옵션 페이지는 전역 구성을 위한 것입니다</value>
     </data>
     <data name="GpuOptionAuto" xml:space="preserve">
-        <value>Auto</value>
+        <value>자동</value>
     </data>
     <data name="GpuOptionDisable" xml:space="preserve">
-        <value>Don’t use</value>
+        <value>사용 안 함</value>
     </data>
     <data name="HardRestartAdb" xml:space="preserve">
-        <value>Trying to kill and restart the ADB process</value>
+        <value>ADB 프로세스를 강제로 종료 및 재시작 시도</value>
     </data>
     <data name="Hide" xml:space="preserve">
-        <value>Hide</value>
+        <value>숨기기</value>
     </data>
     <data name="Home" xml:space="preserve">
-        <value>Home</value>
+        <value>홈</value>
     </data>
     <data name="HotKeyChangingTip" xml:space="preserve">
-        <value>Press Backspace / Esc / Delete to clear the current value</value>
+        <value>Backspace / Esc / Delete를 눌러 현재 값을 지우세요</value>
     </data>
     <data name="HotKeyLinkStart" xml:space="preserve">
-        <value>[HotKey] Start/Stop task</value>
+        <value>[단축키] 작업 시작/중지</value>
     </data>
     <data name="HotKeyNotSet" xml:space="preserve">
-        <value>not set</value>
+        <value>설정되지 않음</value>
     </data>
     <data name="HotKeyOccupiedWarning" xml:space="preserve">
-        <value>⚠️ This hotkey is in use</value>
+        <value>⚠️ 이 단축키는 이미 사용 중입니다</value>
     </data>
     <data name="HotKeyPressing" xml:space="preserve">
-        <value>Press any combination...</value>
+        <value>조합 키를 누르세요...</value>
     </data>
     <data name="HotKeySettings" xml:space="preserve">
-        <value>HotKeys</value>
+        <value>단축키</value>
     </data>
     <data name="HotKeyShowGui" xml:space="preserve">
-        <value>[HotKey] Show/Hide GUI</value>
+        <value>[단축키] GUI 표시/숨기기</value>
     </data>
     <data name="ImageBrowserTitle" xml:space="preserve">
-        <value>Image Browser</value>
+        <value>이미지 브라우저</value>
     </data>
     <data name="ImageFilter" xml:space="preserve">
-        <value>Image Files (*.png;*.jpg;*.jpeg;*.bmp)|*.png;*.jpg;*.jpeg;*.bmp</value>
+        <value>이미지 파일 (*.png;*.jpg;*.jpeg;*.bmp)|*.png;*.jpg;*.jpeg;*.bmp</value>
     </data>
     <data name="InitControllerFailed" xml:space="preserve">
-        <value>Error initializing controller!</value>
+        <value>컨트롤러 초기화 오류!</value>
     </data>
     <data name="InitControllerSuccess" xml:space="preserve">
-        <value>Controller initialized successfully</value>
+        <value>컨트롤러 초기화 성공</value>
     </data>
     <data name="InitInstanceFailed" xml:space="preserve">
-        <value>Failed to initialize MAA instance, a connection error or resource file corruption occurred, please refer to the logs.</value>
+        <value>MAA 인스턴스 초기화 실패, 연결 오류 또는 리소스 파일 손상이 발생했습니다. 로그를 참조하세요.</value>
     </data>
     <data name="InitResourcesSuccess" xml:space="preserve">
-        <value>Resources initialized successfully</value>
+        <value>리소스 초기화 성공</value>
     </data>
     <data name="InputModeOption" xml:space="preserve">
-        <value>Input Mode</value>
+        <value>입력 모드</value>
     </data>
     <data name="Issue" xml:space="preserve">
-        <value>Issue</value>
+        <value>문제</value>
     </data>
     <data name="JSONFilter" xml:space="preserve">
-        <value>JSON Files (*.json)|*.json|All files (*.*)|*.*"</value>
+        <value>JSON 파일 (*.json)|*.json|모든 파일 (*.*)|*.*</value>
     </data>
     <data name="LabelPropertyType" xml:space="preserve">
-        <value>Property Type:</value>
+        <value>속성 유형:</value>
     </data>
     <data name="LanguageOption" xml:space="preserve">
-        <value>Language(语言)</value>
+        <value>언어(语言)</value>
     </data>
     <data name="LanguageOptionDescription" xml:space="preserve">
-        <value>Select application display language, changes will take effect immediately.</value>
+        <value>애플리케이션 표시 언어를 선택하세요. 변경 사항은 즉시 적용됩니다.</value>
     </data>
     <data name="LanguageSettings" xml:space="preserve">
-        <value>Language Setting</value>
+        <value>언어 설정</value>
     </data>
     <data name="Lark" xml:space="preserve">
-        <value>Lark</value>
+        <value>라크</value>
     </data>
     <data name="LDPlayer" xml:space="preserve">
-        <value>LD Player</value>
+        <value>LD 플레이어</value>
     </data>
     <data name="LightColor" xml:space="preserve">
-        <value>Light Color</value>
+        <value>밝은 색상</value>
     </data>
     <data name="Load" xml:space="preserve">
-        <value>Load</value>
+        <value>불러오기</value>
     </data>
     <data name="LoadFileTitle" xml:space="preserve">
-        <value>Select Any File</value>
+        <value>파일 선택</value>
     </data>
     <data name="LoadImageTitle" xml:space="preserve">
-        <value>Select Image File</value>
+        <value>이미지 파일 선택</value>
     </data>
     <data name="LoadingController" xml:space="preserve">
-        <value>Initializing the controller</value>
+        <value>컨트롤러 초기화 중</value>
     </data>
     <data name="LoadingResources" xml:space="preserve">
-        <value>Loading resources</value>
+        <value>리소스 로드 중</value>
     </data>
     <data name="LoadPipelineErrorMessage" xml:space="preserve">
-        <value>Failed to load or parse the pipeline file: {0}</value>
+        <value>파이프라인 파일을 로드하거나 구문 분석하지 못했습니다: {0}</value>
     </data>
     <data name="LoadPipelineTitle" xml:space="preserve">
-        <value>Select Pipeline File</value>
+        <value>파이프라인 파일 선택</value>
     </data>
     <data name="LoadResourcesFailed" xml:space="preserve">
-        <value>Failed to load resources!</value>
+        <value>리소스를 로드하지 못했습니다!</value>
     </data>
     <data name="LogRecord" xml:space="preserve">
-        <value>Log</value>
+        <value>로그</value>
     </data>
     <data name="MaaFwIsLatestVersion" xml:space="preserve">
-        <value>MaaFW is already in the latest version!</value>
+        <value>MaaFW가 최신 버전입니다!</value>
     </data>
     <data name="MaaFWVersion" xml:space="preserve">
-        <value>MaaFW Version</value>
+        <value>MaaFW 버전</value>
     </data>
     <data name="MaaTouch" xml:space="preserve">
-        <value>MaaTouch (Experimental)</value>
+        <value>MaaTouch (실험적)</value>
     </data>
     <data name="MFAIsLatestVersion" xml:space="preserve">
-        <value>Software is already in the latest version!</value>
+        <value>소프트웨어가 최신 버전입니다!</value>
     </data>
     <data name="MinimizeToTray" xml:space="preserve">
-        <value>Hide to tray when minimized</value>
+        <value>최소화 시 트레이로 숨기기</value>
     </data>
     <data name="MiniTouch" xml:space="preserve">
-        <value>MiniTouch (Default)</value>
+        <value>MiniTouch (기본값)</value>
     </data>
     <data name="MirrorAutoUpdatePrompt" xml:space="preserve">
-        <value>Please purchase the Mirror sauce service to enable automatic updates, or switch the download source to GitHub</value>
+        <value>자동 업데이트를 활성화하려면 Mirror 소스 서비스를 구매하거나 다운로드 소스를 GitHub로 전환하세요.</value>
     </data>
     <data name="MirrorChyan" xml:space="preserve">
         <value>Mirror Chyan</value>
     </data>
     <data name="MirrorUseLimitReached" xml:space="preserve">
-        <value>The usage of Mirror Chyan has reached the limit.</value>
+        <value>Mirror Chyan 사용 한도에 도달했습니다.</value>
     </data>
     <data name="MuMuEmulator12" xml:space="preserve">
-        <value>MuMu Emulator 12</value>
+        <value>MuMu 에뮬레이터 12</value>
     </data>
     <data name="NewVersionAvailableLatestVersion" xml:space="preserve">
-        <value> new version is available! Latest version:</value>
+        <value>새 버전이 사용 가능합니다! 최신 버전:</value>
     </data>
     <data name="NewVersionDownloadCompletedTitle" xml:space="preserve">
-        <value>Update Package Download Completed</value>
+        <value>업데이트 패키지 다운로드 완료</value>
     </data>
     <data name="NewVersionFoundDescDownloading" xml:space="preserve">
-        <value>Downloading in the background……</value>
+        <value>백그라운드에서 다운로드 중……</value>
     </data>
     <data name="No" xml:space="preserve">
-        <value>No</value>
+        <value>아니요</value>
     </data>
     <data name="NoEmulatorFound" xml:space="preserve">
-        <value>No emulator found!</value>
+        <value>에뮬레이터를 찾을 수 없습니다!</value>
     </data>
     <data name="None" xml:space="preserve">
-        <value>None</value>
+        <value>없음</value>
     </data>
     <data name="NoTaskToStop" xml:space="preserve">
-        <value>There is no task to stop!</value>
+        <value>중지할 작업이 없습니다!</value>
     </data>
     <data name="NoWindowFound" xml:space="preserve">
-        <value>No window found!</value>
+        <value>창을 찾을 수 없습니다!</value>
     </data>
     <data name="Nox" xml:space="preserve">
         <value>Nox</value>
     </data>
     <data name="Off" xml:space="preserve">
-        <value>Off</value>
+        <value>끄기</value>
     </data>
     <data name="Ok" xml:space="preserve">
-        <value>Ok</value>
+        <value>확인</value>
     </data>
     <data name="OperateController" xml:space="preserve">
-        <value>Select the Controller to Operate</value>
+        <value>작동할 컨트롤러 선택</value>
     </data>
     <data name="Paste" xml:space="preserve">
-        <value>Paste</value>
+        <value>붙여넣기</value>
     </data>
     <data name="PasteAbove" xml:space="preserve">
-        <value>Paste Above</value>
+        <value>위에 붙여넣기</value>
     </data>
     <data name="PasteBelow" xml:space="preserve">
-        <value>Paste Below</value>
+        <value>아래에 붙여넣기</value>
     </data>
     <data name="PerformanceSettings" xml:space="preserve">
-        <value>Performance</value>
+        <value>성능</value>
     </data>
     <data name="PipelineLoadError" xml:space="preserve">
-        <value>Error occurred while loading Pipeline file: {0}</value>
+        <value>파이프라인 파일을 로드하는 중 오류 발생: {0}</value>
     </data>
     <data name="Postscript" xml:space="preserve">
-        <value>Post-script</value>
+        <value>후기</value>
     </data>
     <data name="Prescript" xml:space="preserve">
-        <value>Prescript</value>
+        <value>전기</value>
     </data>
     <data name="ProjectLink" xml:space="preserve">
-        <value>Project Link: </value>
+        <value>프로젝트 링크: </value>
     </data>
     <data name="PurchaseLink" xml:space="preserve">
-        <value>About Mirror Chyan</value>
+        <value>Mirror Chyan에 대해</value>
     </data>
     <data name="Quit" xml:space="preserve">
-        <value>Quit</value>
+        <value>종료</value>
     </data>
     <data name="RegionSelectorTitle" xml:space="preserve">
-        <value>Region Selector</value>
+        <value>영역 선택기</value>
     </data>
     <data name="RegisterCustomAction" xml:space="preserve">
-        <value>Register custom action: {0}</value>
+        <value>사용자 정의 작업 등록: {0}</value>
     </data>
     <data name="RegisterCustomRecognizer" xml:space="preserve">
-        <value>Register custom recognizer: {0}</value>
+        <value>사용자 정의 인식기 등록: {0}</value>
     </data>
     <data name="RegisteringCustomAction" xml:space="preserve">
-        <value>Registering custom action</value>
+        <value>사용자 정의 작업 등록 중</value>
     </data>
     <data name="RegisteringCustomRecognizer" xml:space="preserve">
-        <value>Registering custom recognizer</value>
+        <value>사용자 정의 인식기 등록 중</value>
     </data>
     <data name="RememberAdb" xml:space="preserve">
-        <value>Remember Connection</value>
+        <value>연결 기억</value>
     </data>
     <data name="RepeatOption" xml:space="preserve">
-        <value>Repeat Count</value>
+        <value>반복 횟수</value>
     </data>
     <data name="RescanController" xml:space="preserve">
-        <value>Rescan Controllers</value>
+        <value>컨트롤러 다시 검색</value>
     </data>
     <data name="ResourceDownloadSource" xml:space="preserve">
-        <value>Resource Download Source</value>
+        <value>리소스 다운로드 소스</value>
     </data>
     <data name="ResourceLink" xml:space="preserve">
-        <value>Resource Link: </value>
+        <value>리소스 링크: </value>
     </data>
     <data name="ResourceName" xml:space="preserve">
-        <value>Resource Name</value>
+        <value>리소스 이름</value>
     </data>
     <data name="ResourceOption" xml:space="preserve">
-        <value>Resources Type</value>
+        <value>리소스 유형</value>
     </data>
     <data name="ResourcesAreLatestVersion" xml:space="preserve">
-        <value>Resources are already in the latest version!</value>
+        <value>리소스가 이미 최신 버전입니다!</value>
     </data>
     <data name="ResourceVersion" xml:space="preserve">
-        <value>Resource Version</value>
+        <value>리소스 버전</value>
     </data>
     <data name="Restart" xml:space="preserve">
-        <value>Restart</value>
+        <value>재시작</value>
     </data>
     <data name="RestartAdb" xml:space="preserve">
-        <value>Trying to restart the ADB Server</value>
+        <value>ADB 서버 재시작 시도 중</value>
     </data>
     <data name="RestartMFA" xml:space="preserve">
-        <value>Restart MFA</value>
+        <value>MFA 재시작</value>
     </data>
     <data name="RestartPC" xml:space="preserve">
-        <value>Restart computer</value>
+        <value>컴퓨터 재시작</value>
     </data>
     <data name="RetryOnDisconnected" xml:space="preserve">
-        <value>Retry launching the emulator when ADB connection fails</value>
+        <value>ADB 연결 실패 시 에뮬레이터 실행 재시도</value>
     </data>
     <data name="RunningSettings" xml:space="preserve">
-        <value>Running</value>
+        <value>실행</value>
     </data>
     <data name="SaveFailureMessage" xml:space="preserve">
-        <value>Failed to save task!</value>
+        <value>작업을 저장하지 못했습니다!</value>
     </data>
     <data name="SavePipelineSuccess" xml:space="preserve">
-        <value>Saved successfully!</value>
+        <value>성공적으로 저장되었습니다!</value>
     </data>
     <data name="SavePipelineWarning" xml:space="preserve">
-        <value>There are tasks with duplicate names in the task list!</value>
+        <value>작업 목록에 중복된 이름의 작업이 있습니다!</value>
     </data>
     <data name="SaveSuccessMessage" xml:space="preserve">
-        <value>Task saved successfully!</value>
+        <value>작업이 성공적으로 저장되었습니다!</value>
     </data>
     <data name="ScheduleSettings" xml:space="preserve">
-        <value>Schedule</value>
+        <value>일정</value>
     </data>
     <data name="ScreencapCost" xml:space="preserve">
-        <value>Screenshot time: {0}ms({1})</value>
+        <value>스크린샷 시간: {0}ms({1})</value>
     </data>
     <data name="ScreencapErrorTip" xml:space="preserve">
-        <value>Screencap takes too long: {0}ms({1})</value>
+        <value>스크린샷 시간이 너무 깁니다: {0}ms({1})</value>
     </data>
     <data name="ScreencapWarningTip" xml:space="preserve">
-        <value>Screencap takes a long time: {0}ms({1})</value>
+        <value>스크린샷 시간이 오래 걸립니다: {0}ms({1})</value>
     </data>
     <data name="Select" xml:space="preserve">
-        <value>Select</value>
+        <value>선택</value>
     </data>
     <data name="SelectAll" xml:space="preserve">
-        <value>Select All</value>
+        <value>모두 선택</value>
     </data>
     <data name="SelectExecutableFile" xml:space="preserve">
-        <value>Select Executable File</value>
+        <value>실행 파일 선택</value>
     </data>
     <data name="SelectExistingImage" xml:space="preserve">
-        <value>Select an existing image</value>
+        <value>기존 이미지 선택</value>
     </data>
     <data name="Settings" xml:space="preserve">
         <value>설정</value>
     </data>
     <data name="Show" xml:space="preserve">
-        <value>Show</value>
+        <value>표시</value>
     </data>
     <data name="ShowDisclaimerNoMore" xml:space="preserve">
-        <value>Don't show again</value>
+        <value>다시 표시하지 않기</value>
     </data>
     <data name="ShowHitDraw" xml:space="preserve">
-        <value>Show node hit information in pop-up window (for debugging)</value>
+        <value>팝업 창에 노드 히트 정보 표시 (디버깅용)</value>
     </data>
     <data name="ShutDown" xml:space="preserve">
-        <value>Shut Down</value>
+        <value>종료</value>
     </data>
     <data name="SliderControlTitle" xml:space="preserve">
-        <value>Slider Control</value>
+        <value>슬라이더 컨트롤</value>
     </data>
     <data name="SoftwarePath" xml:space="preserve">
-        <value>Software Path</value>
+        <value>소프트웨어 경로</value>
     </data>
     <data name="SoftwareUpdate" xml:space="preserve">
-        <value>Update Software</value>
+        <value>소프트웨어 업데이트</value>
     </data>
     <data name="SoftwareVersion" xml:space="preserve">
-        <value>Software Version</value>
+        <value>소프트웨어 버전</value>
     </data>
     <data name="StartTask" xml:space="preserve">
-        <value>Start Task</value>
+        <value>작업 시작</value>
     </data>
     <data name="StartupParameter" xml:space="preserve">
-        <value>Startup Parameter</value>
+        <value>시작 매개변수</value>
     </data>
     <data name="StartupScript" xml:space="preserve">
-        <value>Startup script</value>
+        <value>시작 스크립트</value>
     </data>
     <data name="StartupSettings" xml:space="preserve">
-        <value>Startup</value>
+        <value>시작</value>
     </data>
     <data name="StartupSoftware" xml:space="preserve">
-        <value>Startup software</value>
+        <value>소프트웨어 시작</value>
     </data>
     <data name="StartupSoftwareAndScript" xml:space="preserve">
-        <value>Startup software and script</value>
+        <value>소프트웨어 및 스크립트 시작</value>
     </data>
     <data name="Stopping" xml:space="preserve">
-        <value>Stopping......</value>
+        <value>중지 중......</value>
     </data>
     <data name="StoppingFailed" xml:space="preserve">
-        <value>Failed to stop the task</value>
+        <value>작업을 중지하지 못했습니다</value>
     </data>
     <data name="StopTask" xml:space="preserve">
-        <value>Stop Task</value>
+        <value>작업 중지</value>
     </data>
     <data name="SwitchConfiguration" xml:space="preserve">
-        <value>Switch Configuration</value>
+        <value>구성 전환</value>
     </data>
     <data name="SwitchLanguage" xml:space="preserve">
-        <value>Switch Language 🌐</value>
+        <value>언어 전환 🌐</value>
     </data>
     <data name="TabADB" xml:space="preserve">
         <value>ADB</value>
@@ -873,204 +873,204 @@
         <value>Win32</value>
     </data>
     <data name="Task" xml:space="preserve">
-        <value>Tasks</value>
+        <value>작업</value>
     </data>
     <data name="TaskAbandoned" xml:space="preserve">
-        <value>Task has been abandoned</value>
+        <value>작업이 포기되었습니다</value>
     </data>
     <data name="TaskAllCompleted" xml:space="preserve">
-        <value>All tasks have been completed!</value>
+        <value>모든 작업이 완료되었습니다!</value>
     </data>
     <data name="TaskAllCompletedWithTime" xml:space="preserve">
-        <value>All tasks have been completed!\n(Elapsed time {0}h {1}m {2}s)</value>
+        <value>모든 작업이 완료되었습니다!\n(소요 시간 {0}시간 {1}분 {2}초)</value>
     </data>
     <data name="TaskCompleted" xml:space="preserve">
-        <value>Task has been completed</value>
+        <value>작업이 완료되었습니다</value>
     </data>
     <data name="TaskDescription" xml:space="preserve">
-        <value>Task Description</value>
+        <value>작업 설명</value>
     </data>
     <data name="TaskList" xml:space="preserve">
-        <value>Task List:</value>
+        <value>작업 목록:</value>
     </data>
     <data name="TaskNotFoundError" xml:space="preserve">
-        <value>The task "{1}" used in {0} does not exist in the Pipeline file!</value>
+        <value>파이프라인 파일에서 사용된 작업 "{1}"이(가) 존재하지 않습니다: {0}</value>
     </data>
     <data name="TaskSettings" xml:space="preserve">
-        <value>Task Settings</value>
+        <value>작업 설정</value>
     </data>
     <data name="TaskStackError" xml:space="preserve">
-        <value>Error occurred while detecting {0}: {1}</value>
+        <value>{0}을(를) 감지하는 중 오류 발생: {1}</value>
     </data>
     <data name="TaskStart" xml:space="preserve">
-        <value>Starting task: {0}</value>
+        <value>작업 시작 중: {0}</value>
     </data>
     <data name="TaskStopped" xml:space="preserve">
-        <value>Task has been stopped</value>
+        <value>작업이 중지되었습니다</value>
     </data>
     <data name="TextRecognizerTitle" xml:space="preserve">
-        <value>Text Recognizer</value>
+        <value>텍스트 인식기</value>
     </data>
     <data name="ThemeOption" xml:space="preserve">
-        <value>UI Theme</value>
+        <value>UI 테마</value>
     </data>
     <data name="ThemeSettings" xml:space="preserve">
-        <value>Theme Setting</value>
+        <value>테마 설정</value>
     </data>
     <data name="Timer" xml:space="preserve">
-        <value>Timer</value>
+        <value>타이머</value>
     </data>
     <data name="TimerCustomConfig" xml:space="preserve">
-        <value>Custom config</value>
+        <value>사용자 정의 설정</value>
     </data>
     <data name="TimerCustomConfigTip" xml:space="preserve">
-        <value>Restart and switch configuration two minutes in advance</value>
+        <value>2분 전에 재시작 및 구성 전환</value>
     </data>
     <data name="Tip" xml:space="preserve">
-        <value>Tip</value>
+        <value>팁</value>
     </data>
     <data name="TooltipDragLabel" xml:space="preserve">
-        <value>Drag label to reorder</value>
+        <value>레이블을 드래그하여 순서 변경</value>
     </data>
     <data name="TooltipRefresh" xml:space="preserve">
-        <value>Refresh</value>
+        <value>새로 고침</value>
     </data>
     <data name="TryToReconnectByAdb" xml:space="preserve">
-        <value>Attempting to reconnect</value>
+        <value>재연결 시도 중</value>
     </data>
     <data name="TryToStartEmulator" xml:space="preserve">
-        <value>Trying to start the emulator</value>
+        <value>에뮬레이터 시작 시도 중</value>
     </data>
     <data name="UiSettings" xml:space="preserve">
         <value>GUI</value>
     </data>
     <data name="Unconnected" xml:space="preserve">
-        <value>Unconnected</value>
+        <value>연결되지 않음</value>
     </data>
     <data name="Update" xml:space="preserve">
-        <value>Update</value>
+        <value>업데이트</value>
     </data>
     <data name="UpdateCompleted" xml:space="preserve">
-        <value>Update completed</value>
+        <value>업데이트 완료</value>
     </data>
     <data name="UpdateMaaFW" xml:space="preserve">
-        <value>Update MaaFW</value>
+        <value>MaaFW 업데이트</value>
     </data>
     <data name="UpdateResource" xml:space="preserve">
-        <value>Update Resources</value>
+        <value>리소스 업데이트</value>
     </data>
     <data name="UpdateSettings" xml:space="preserve">
-        <value>Update</value>
+        <value>업데이트</value>
     </data>
     <data name="UseGpuForInference" xml:space="preserve">
-        <value>Use GPU for inference acceleration</value>
+        <value>추론 가속화를 위해 GPU 사용</value>
     </data>
     <data name="WaitSoftware" xml:space="preserve">
-        <value>Wait time for Software to start (seconds)</value>
+        <value>소프트웨어 시작 대기 시간 (초)</value>
     </data>
     <data name="WaitSoftwareTime" xml:space="preserve">
-        <value>Wait time for {0} to start (seconds): {1}(s)</value>
+        <value>{0} 시작 대기 시간 (초): {1}(초)</value>
     </data>
     <data name="Warning_CannotConnect" xml:space="preserve">
-        <value>Unable to connect to {0}</value>
+        <value>{0}에 연결할 수 없습니다</value>
     </data>
     <data name="Window" xml:space="preserve">
-        <value>Window</value>
+        <value>창</value>
     </data>
     <data name="WindowDetectionStarted" xml:space="preserve">
-        <value>Starting window search!</value>
+        <value>창 검색 시작!</value>
     </data>
     <data name="WindowSelectionMessage" xml:space="preserve">
-        <value>Window selected: {0}</value>
+        <value>선택된 창: {0}</value>
     </data>
     <data name="WorkflowDiagramTitle" xml:space="preserve">
-        <value>Workflow Diagram</value>
+        <value>워크플로우 다이어그램</value>
     </data>
     <data name="WxPusher" xml:space="preserve">
         <value>WxPusher</value>
     </data>
     <data name="Yes" xml:space="preserve">
-        <value>Yes</value>
+        <value>예</value>
     </data>
     <data name="CurrentConfig" xml:space="preserve">
-        <value>Current Configuration</value>
+        <value>현재 구성</value>
     </data>
     <data name="ViewOrSwitchConfig" xml:space="preserve">
-        <value>View or Switch Existing Configuration</value>
+        <value>기존 구성 보기 또는 전환</value>
     </data>
     <data name="NewConfigName" xml:space="preserve">
-        <value>New Configuration Name</value>
+        <value>새 구성 이름</value>
     </data>
     <data name="SetUniqueIdentifier" xml:space="preserve">
-        <value>	Set Unique Identifier for Custom Configuration</value>
+        <value>사용자 정의 구성에 고유 식별자 설정</value>
     </data>
     <data name="CreateNewConfig" xml:space="preserve">
-        <value>Create New Configuration</value>
+        <value>새 구성 생성</value>
     </data>
     <data name="CreateFromCurrent" xml:space="preserve">
-        <value>Create New Template from Current Configuration</value>
+        <value>현재 구성에서 새 템플릿 생성</value>
     </data>
     <data name="TriggerTime" xml:space="preserve">
-        <value>Trigger Time</value>
+        <value>트리거 시간</value>
     </data>
     <data name="SelectedConfig" xml:space="preserve">
-        <value>Selected Config</value>
+        <value>선택된 구성</value>
     </data>
     <data name="ExternalNotificationOneBotKey" xml:space="preserve">
-        <value>Key</value>
+        <value>키</value>
     </data>
     <data name="ExternalNotificationOneBotServer" xml:space="preserve">
-        <value>Server</value>
+        <value>서버</value>
     </data>
     <data name="ExternalNotificationOneBotUser" xml:space="preserve">
-        <value>User QQ</value>
+        <value>사용자 QQ</value>
     </data>
     <data name="CreateCustomTheme" xml:space="preserve">
-        <value>Create Custom Theme</value>
+        <value>사용자 정의 테마 생성</value>
     </data>
     <data name="ConfigurePrimaryAccent" xml:space="preserve">
-        <value>Configure Primary and Accent Colors and Apply to Application</value>
+        <value>기본 및 강조 색상을 구성하고 애플리케이션에 적용</value>
     </data>
     <data name="ColorThemeAlreadyExists" xml:space="preserve">
-        <value>The color theme already exists</value>
+        <value>색상 테마가 이미 존재합니다</value>
     </data>
     <data name="Later" xml:space="preserve">
-        <value>Later</value>
+        <value>나중에</value>
     </data>
     <data name="ErrorWhenCheck" xml:space="preserve">
-        <value>Failed to check for the latest version of {0}.</value>
+        <value>{0}의 최신 버전을 확인하지 못했습니다.</value>
     </data>
     <data name="Resource" xml:space="preserve">
-        <value>Resource</value>
+        <value>리소스</value>
     </data>
     <data name="MirrorCdkExpired" xml:space="preserve">
-        <value>CDK has expired, please renew and try again.</value>
+        <value>CDK가 만료되었습니다. 갱신 후 다시 시도하세요.</value>
     </data>
     <data name="MirrorCdkInvalid" xml:space="preserve">
-        <value>CDK is invalid, please check your input.</value>
+        <value>CDK가 유효하지 않습니다. 입력을 확인하세요.</value>
     </data>
     <data name="MirrorCdkMismatch" xml:space="preserve">
-        <value>CDK type does not match the resource.</value>
+        <value>CDK 유형이 리소스와 일치하지 않습니다.</value>
     </data>
     <data name="StartingAgent" xml:space="preserve">
-        <value>Starting Agent (may take a while)</value>
+        <value>에이전트 시작 중 (시간이 걸릴 수 있음)</value>
     </data>
     <data name="AgentStartFailed" xml:space="preserve">
-        <value>Agent startup failure</value>
+        <value>에이전트 시작 실패</value>
     </data>
     <data name="Optional" xml:space="preserve">
-        <value>Optional</value>
+        <value>선택 사항</value>
     </data>
     <data name="ExternalNotificationEnableCustomNotificationMessage" xml:space="preserve">
-        <value>Enable Custom Notification Message</value>
+        <value>사용자 정의 알림 메시지 활성화</value>
     </data>
     <data name="ExternalNotificationCustomNotificationContent" xml:space="preserve">
-        <value>Custom Notification Content</value>
+        <value>사용자 정의 알림 내용</value>
     </data>
     <data name="ExternalNotificationTest" xml:space="preserve">
-        <value>This is a send test</value>
+        <value>이것은 테스트 전송입니다</value>
     </data>
     <data name="GlobalHotkeyServiceError" xml:space="preserve">
-        <value>Global Hotkey Service Failed to Load</value>
+        <value>글로벌 단축키 서비스 로드 실패</value>
     </data>
 </root>
