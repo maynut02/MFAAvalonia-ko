@@ -1,5 +1,6 @@
 ﻿using MFAAvalonia.Helper.Converters;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,7 +17,7 @@ public partial class MaaInterface
         public string? Name { get; set; }
 
         [JsonProperty("pipeline_override")]
-        public Dictionary<string, MaaNode>? PipelineOverride { get; set; }
+        public Dictionary<string, JToken>? PipelineOverride { get; set; }
 
         public override string? ToString()
         {
@@ -38,6 +39,10 @@ public partial class MaaInterface
         public List<MaaInterfaceOptionCase>? Cases { get; set; }
         [JsonProperty("default_case")]
         public string? DefaultCase { get; set; }
+        
+        [JsonProperty("doc")]
+        [JsonConverter(typeof(GenericSingleOrListConverter<string>))]
+        public List<string>? Document { get; set; }
     }
     
     public class MaaInterfaceSelectAdvanced
@@ -84,8 +89,8 @@ public partial class MaaInterface
         [JsonProperty("repeat_count")] public int? RepeatCount;
         [JsonProperty("advanced")] public List<MaaInterfaceSelectAdvanced>? Advanced;
         [JsonProperty("option")] public List<MaaInterfaceSelectOption>? Option;
-
-        [JsonProperty("pipeline_override")] public Dictionary<string, MaaNode>? PipelineOverride;
+        
+        [JsonProperty("pipeline_override")] public Dictionary<string, JToken>? PipelineOverride;
 
         public override string ToString()
         {
@@ -191,11 +196,17 @@ public partial class MaaInterface
 
     [JsonProperty("version")]
     public string? Version { get; set; }
+    
+    [JsonProperty("mfa_max_version")]
+    public string? MFAMaxVersion { get; set; }
+    
+    [JsonProperty("mfa_min_version")]
+    public string? MFAMinVersion { get; set; }
 
     [JsonProperty("message")]
     public string? Message { get; set; }
 
-    [JsonProperty("url")]
+    [JsonProperty("url")]   
     public string? Url { get; set; }
 
     [JsonProperty("custom_title")]

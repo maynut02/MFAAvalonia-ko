@@ -11,6 +11,7 @@ using MFAAvalonia.Extensions;
 using MFAAvalonia.Extensions.MaaFW;
 using MFAAvalonia.Helper;
 using MFAAvalonia.Helper.ValueType;
+using MFAAvalonia.ViewModels.Windows;
 using MFAAvalonia.Views.UserControls;
 using Newtonsoft.Json;
 using SukiUI.Controls;
@@ -113,6 +114,7 @@ public partial class RootView : SukiWindow
         WindowState = WindowState.Normal;
         Activate();
     }
+
 #pragma warning disable CS4014 // 由于此调用不会等待，因此在此调用完成之前将会继续执行当前方法。请考虑将 "await" 运算符应用于调用结果。
     protected override void OnClosing(WindowClosingEventArgs e)
     {
@@ -126,14 +128,29 @@ public partial class RootView : SukiWindow
 
     protected override void OnClosed(EventArgs e)
     {
-        ConfigurationManager.Current.SetValue(ConfigurationKeys.TaskItems, Instances.TaskQueueViewModel.TaskItemViewModels.ToList().Select(model => model.InterfaceItem));
-
-        // 确保窗口大小被保存
-        SaveWindowSize();
-
-        MaaProcessor.Instance.SetTasker();
-        GlobalHotkeyService.Shutdown();
+        BeforeClosed();
         base.OnClosed(e);
+    }
+
+    public void BeforeClosed()
+    {
+        if (!GlobalHotkeyService.IsStopped)
+        {
+            if (Instances.RootViewModel.IsRunning)
+            {
+                MaaProcessor.Instance.Stop(MFATask.MFATaskStatus.STOPPED);
+            }
+            ConfigurationManager.Current.SetValue(ConfigurationKeys.TaskItems, Instances.TaskQueueViewModel.TaskItemViewModels.ToList().Select(model => model.InterfaceItem));
+
+            // 确保窗口大小被保存
+            SaveWindowSize();
+
+            LoggerHelper.Info("MFA Closed!");
+
+            MaaProcessor.Instance.SetTasker();
+            LoggerHelper.DisposeLogger();
+            GlobalHotkeyService.Shutdown();
+        }
     }
 
     public async Task<bool> ConfirmExit(Action? action = null)
@@ -161,7 +178,7 @@ public partial class RootView : SukiWindow
             {
                 LoggerHelper.Error(e);
             }
-            finally { Environment.Exit(0); }
+            finally { Instances.ShutdownApplication(); }
 
             return true;
         }
@@ -220,37 +237,25 @@ public partial class RootView : SukiWindow
                 });
                 MaaProcessor.Instance.Start(true, checkUpdate: true);
             }
-            try
-            {
-                var tempMFADir = Path.Combine(AppContext.BaseDirectory, "temp_mfa");
-                if (Directory.Exists(tempMFADir))
-                    Directory.Delete(tempMFADir, true);
 
-                var tempMaaDir = Path.Combine(AppContext.BaseDirectory, "temp_maafw");
-                if (Directory.Exists(tempMaaDir))
-                    Directory.Delete(tempMaaDir, true);
-
-                var tempResDir = Path.Combine(AppContext.BaseDirectory, "temp_res");
-                if (Directory.Exists(tempResDir))
-                    Directory.Delete(tempResDir, true);
-            }
-            catch (Exception e)
-            {
-                LoggerHelper.Error(e);
-            }
             GlobalConfiguration.SetValue(ConfigurationKeys.NoAutoStart, bool.FalseString);
 
             Instances.RootViewModel.LockController = (MaaProcessor.Interface?.Controller?.Count ?? 0) < 2;
-            ConfigurationManager.Current.SetValue(ConfigurationKeys.EnableEdit, ConfigurationManager.Current.GetValue(ConfigurationKeys.EnableEdit, false));
 
+            ConfigurationManager.Current.SetValue(ConfigurationKeys.EnableEdit, ConfigurationManager.Current.GetValue(ConfigurationKeys.EnableEdit, false));
+            DragItemViewModel tempTask = null;
             foreach (var task in Instances.TaskQueueViewModel.TaskItemViewModels)
             {
                 if (task.InterfaceItem?.Advanced is { Count: > 0 } || task.InterfaceItem?.Option is { Count: > 0 } || task.InterfaceItem?.Document != null || task.InterfaceItem?.Repeatable == true)
                 {
-                    task.EnableSetting = true;
-                    break;
+                    tempTask ??= task;
                 }
+                task.EnableSetting = true;
             }
+
+            if (tempTask != null)
+                tempTask.EnableSetting = true;
+
 
             if (!string.IsNullOrWhiteSpace(MaaProcessor.Interface?.Message))
             {
@@ -264,7 +269,8 @@ public partial class RootView : SukiWindow
             await Task.Delay(1000);
             DispatcherHelper.RunOnMainThread(() =>
             {
-                Instances.AnnouncementViewModel.CheckAnnouncement();
+                DispatcherHelper.RunOnMainThread(VersionChecker.CheckMinVersion);
+                AnnouncementViewModel.CheckAnnouncement();
                 if (ConfigurationManager.Current.GetValue(ConfigurationKeys.AutoMinimize, false))
                 {
                     WindowState = WindowState.Minimized;
@@ -332,7 +338,7 @@ public partial class RootView : SukiWindow
         }
     }
 
-    private void SaveWindowSize()
+    public void SaveWindowSize()
     {
         // 初始化过程中不保存窗口大小
         if (_isInitializing)

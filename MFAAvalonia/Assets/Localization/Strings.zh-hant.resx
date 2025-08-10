@@ -51,7 +51,7 @@
         <value>新增任務</value>
     </data>
     <data name="AdvancedSetting" xml:space="preserve">
-        <value>進階設定</value>
+        <value>進階</value>
     </data>
     <data name="AfterTaskOption" xml:space="preserve">
         <value>結束後操作</value>
@@ -171,7 +171,7 @@
         <value>顏色主題</value>
     </data>
     <data name="CommonSetting" xml:space="preserve">
-        <value> 常規設定 </value>
+        <value>常規</value>
     </data>
     <data name="ConfigAddedSuccessfully" xml:space="preserve">
         <value>配置 &lt;{0}&gt; 新增成功！</value>
@@ -192,7 +192,7 @@
         <value>確定要退出嗎？</value>
     </data>
     <data name="ConfirmExitTitle" xml:space="preserve">
-        <value>MFA 正在執行任務</value>
+        <value>當前正在執行任務</value>
     </data>
     <data name="Connected" xml:space="preserve">
         <value>已連接</value>
@@ -813,10 +813,10 @@
         <value>顯示</value>
     </data>
     <data name="ShowDisclaimerNoMore" xml:space="preserve">
-        <value>下次不再提示</value>
+        <value>下次更新前不再提示</value>
     </data>
     <data name="ShowHitDraw" xml:space="preserve">
-        <value>顯示節點命中彈窗 (用於除錯)</value>
+        <value>顯示節點命中截圖（用於除錯）</value>
     </data>
     <data name="ShutDown" xml:space="preserve">
         <value>關機</value>
@@ -894,7 +894,7 @@
         <value>任務清單</value>
     </data>
     <data name="TaskNotFoundError" xml:space="preserve">
-        <value>Pipeline檔案中任務的{0}使用了不存在的任務:"{1}"！</value>
+        <value>Pipeline檔案中任務"{0}"的{1}使用了不存在的任務:"{2}"！</value>
     </data>
     <data name="TaskSettings" xml:space="preserve">
         <value>任務設定</value>
@@ -1072,5 +1072,116 @@
     </data>
     <data name="GlobalHotkeyServiceError" xml:space="preserve">
         <value>全域快速鍵服務載入失敗</value>
+    </data>
+    <data name="UpcomingChanges" xml:space="preserve">
+        <value>即將發生的變更</value>
+    </data>
+    <data name="TaskFailed" xml:space="preserve">
+        <value>任務運行失敗！</value>
+    </data>
+    <data name="ExternalNotificationCustomNotificationContentSuccess" xml:space="preserve">
+        <value>自訂成功通知內容</value>
+    </data>
+    <data name="ExternalNotificationCustomNotificationContentFailure" xml:space="preserve">
+        <value>自訂失敗通知內容</value>
+    </data>
+    <data name="BetaVersion" xml:space="preserve">
+        <value>公測版</value>
+    </data>
+    <data name="StableVersion" xml:space="preserve">
+        <value>正式版</value>
+    </data>
+    <data name="ResourceUpdateChannel" xml:space="preserve">
+        <value>資源更新渠道</value>
+    </data>
+    <data name="UpdateLog" xml:space="preserve">
+        <value>​更新日誌</value>
+    </data>
+    <data name="ProxySettings" xml:space="preserve">
+        <value>代理設定</value>
+    </data>
+    <data name="UiVersionBelowResourceRequirement" xml:space="preserve">
+        <value>當前界面版本 {0} 低於資源要求的最低版本 {1}，部分功能將無法正常使用，建議更新軟件。</value>
+    </data>
+    <data name="AboutToken" xml:space="preserve">
+        <value>關於Token</value>
+    </data>
+    <data name="Extracting" xml:space="preserve">
+        <value>正在解壓</value>
+    </data>
+    <data name="AlphaVersion" xml:space="preserve">
+        <value>內測版</value>
+    </data>
+    <data name="UIUpdateChannel" xml:space="preserve">
+        <value>UI 更新渠道</value>
+    </data>
+    <data name="ExportLog" xml:space="preserve">
+        <value>導出日誌</value>
+    </data>
+    <data name="Warning" xml:space="preserve">
+        <value>警告</value>
+    </data>
+    <data name="StopTaskBeforeExportLog" xml:space="preserve">
+        <value>導出日誌前請停止任務</value>
+    </data>
+    <data name="MirrorCdkEmpty" xml:space="preserve">
+        <value>CDK 為空，請到設定中的更新設定填寫 CDK 或切換更新源至 GitHub</value>
+    </data>
+    <data name="ContinueRunningWhenError" xml:space="preserve">
+        <value>任務執行失敗後是否繼續執行其他任務</value>
+    </data>
+    <data name="CurrentOtherUpdatingTask" xml:space="preserve">
+        <value>目前存在其他正在執行的更新任務</value>
+    </data>
+    <data name="RedownloadUiFullPackage" xml:space="preserve">
+        <value>重新下載 UI 全量包</value>
+    </data>
+    <data name="RedownloadResourceFullPackage" xml:space="preserve">
+        <value>重新下載資源全量包</value>
+    </data>
+    <data name="MirrorCDKBanned" xml:space="preserve">
+        <value>CDK 已被封禁</value>
+    </data>
+    <data name="ScreenshotTest" xml:space="preserve">
+        <value>截圖測試</value>
+    </data>
+    <data name="ScreenshotPage" xml:space="preserve">
+        <value>截圖</value>
+    </data>
+    <data name="ScreenshotFailed" xml:space="preserve">
+        <value>截圖失败</value>
+    </data>
+    <data name="DisplayAnnouncement" xml:space="preserve">
+        <value>顯示公告</value>
+    </data>
+    <data name="ScreenshotEmpty" xml:space="preserve">
+        <value>目前截圖為空! 請點擊【截圖測試】獲取截圖</value>
+    </data>
+    <data name="SaveScreenshot" xml:space="preserve">
+        <value>儲存截圖</value>
+    </data>
+    <data name="AnnouncementEmpty" xml:space="preserve">
+        <value>目前公告為空</value>
+    </data>
+    <data name="Execute" xml:space="preserve">
+        <value>執行</value>
+    </data>
+    <data name="StoppingInternalTask" xml:space="preserve">
+        <value>Stopping internal task...</value>
+    </data>
+    <data name="Verifying" xml:space="preserve">
+        <value>驗證中</value>
+    </data>
+    <data name="HashVerificationFailed" xml:space="preserve">
+        <value>雜湊驗證失敗！資源可能已損壞，可能是網路波動導致，請嘗試重新下載資源。</value>
+    </data>
+    <data name="FileLoadFailed" xml:space="preserve">
+        <value>文件 {0} 載入失敗！</value>
+    </data>
+    <data name="CopyToClipboard" xml:space="preserve">
+        <value>複製到剪貼簿</value>
+    </data>
+    <data name="UseDirectMLSupportedDevice" xml:space="preserve">
+        <value>Use DirectML-supported devices</value>
     </data>
 </root>

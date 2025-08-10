@@ -65,6 +65,10 @@ public partial class TaskQueueViewModel : ViewModelBase
 
     #region 任务
 
+    [ObservableProperty] private bool _isCommon = true;
+    [ObservableProperty] private bool _showSettings;
+
+
     [ObservableProperty] private ObservableCollection<DragItemViewModel> _taskItemViewModels = [];
 
     partial void OnTaskItemViewModelsChanged(ObservableCollection<DragItemViewModel> value)
@@ -83,12 +87,18 @@ public partial class TaskQueueViewModel : ViewModelBase
 
     public void StartTask()
     {
+        if (Instances.RootViewModel.IsRunning)
+        {
+            ToastHelper.Warn("ConfirmExitTitle".ToLocalization());
+            LoggerHelper.Warning("ConfirmExitTitle".ToLocalization());
+            return;
+        }
         MaaProcessor.Instance.Start();
     }
 
-    public void StopTask()
+    public void StopTask(Action? action = null)
     {
-        MaaProcessor.Instance.Stop();
+        MaaProcessor.Instance.Stop(MFATask.MFATaskStatus.STOPPED, action: action);
     }
 
     [RelayCommand]
@@ -204,29 +214,29 @@ public partial class TaskQueueViewModel : ViewModelBase
 
     public void OutputDownloadProgress(string output, bool downloading = true)
     {
-        DispatcherHelper.RunOnMainThread(() =>
-        {
-            var log = new LogItemViewModel(downloading ? "NewVersionFoundDescDownloading".ToLocalization() + "\n" + output : output, Instances.RootView.FindResource("SukiAccentColor") as IBrush,
-                dateFormat: "HH':'mm':'ss")
-            {
-                IsDownloading = true,
-            };
-            if (LogItemViewModels.Count > 0 && LogItemViewModels[0].IsDownloading)
-            {
-                if (!string.IsNullOrEmpty(output))
-                {
-                    LogItemViewModels[0] = log;
-                }
-                else
-                {
-                    LogItemViewModels.RemoveAt(0);
-                }
-            }
-            else if (!string.IsNullOrEmpty(output))
-            {
-                LogItemViewModels.Insert(0, log);
-            }
-        });
+        // DispatcherHelper.RunOnMainThread(() =>
+        // {
+        //     var log = new LogItemViewModel(downloading ? "NewVersionFoundDescDownloading".ToLocalization() + "\n" + output : output, Instances.RootView.FindResource("SukiAccentColor") as IBrush,
+        //         dateFormat: "HH':'mm':'ss")
+        //     {
+        //         IsDownloading = true,
+        //     };
+        //     if (LogItemViewModels.Count > 0 && LogItemViewModels[0].IsDownloading)
+        //     {
+        //         if (!string.IsNullOrEmpty(output))
+        //         {
+        //             LogItemViewModels[0] = log;
+        //         }
+        //         else
+        //         {
+        //             LogItemViewModels.RemoveAt(0);
+        //         }
+        //     }
+        //     else if (!string.IsNullOrEmpty(output))
+        //     {
+        //         LogItemViewModels.Insert(0, log);
+        //     }
+        // });
     }
 
     public const string INFO = "info:";
@@ -299,13 +309,17 @@ public partial class TaskQueueViewModel : ViewModelBase
     #endregion
 
     #region 连接
-
+    [ObservableProperty] private int shouldShow = 0;
     [ObservableProperty] private ObservableCollection<object> _devices = [];
     [ObservableProperty] private object? _currentDevice;
     private DateTime? _lastExecutionTime;
     partial void OnCurrentDeviceChanged(object? value)
     {
+        ChangedDevice(value);
+    }
 
+    public void ChangedDevice(object? value)
+    {
         if (value != null)
         {
             var now = DateTime.Now;
@@ -315,7 +329,7 @@ public partial class TaskQueueViewModel : ViewModelBase
             }
             else
             {
-                if (now - _lastExecutionTime < TimeSpan.FromSeconds(1))
+                if (now - _lastExecutionTime < TimeSpan.FromSeconds(2))
                     return;
                 _lastExecutionTime = now;
             }
@@ -404,11 +418,22 @@ public partial class TaskQueueViewModel : ViewModelBase
         TaskManager.RunTask(() => AutoDetectDevice(_refreshCancellationTokenSource.Token), _refreshCancellationTokenSource.Token, handleError: (e) => HandleDetectionError(e, CurrentController == MaaControllerTypes.Adb),
             catchException: true, shouldLog: true);
     }
+    [RelayCommand]
+    private void CloseE()
+    {
+        MaaProcessor.CloseSoftware();
+    }
 
     [RelayCommand]
     private void Clear()
     {
         LogItemViewModels.Clear();
+    }
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
+    [RelayCommand]
+    private void Export()
+    {
+        FileLogExporter.CompressRecentLogs(Instances.RootView.StorageProvider);
     }
 
     public void AutoDetectDevice(CancellationToken token = default)
@@ -604,12 +629,12 @@ public partial class TaskQueueViewModel : ViewModelBase
                 AutoDetectDevice(_refreshCancellationTokenSource.Token);
             return;
         }
-
         DispatcherHelper.PostOnMainThread(() =>
         {
             Devices = [device];
             CurrentDevice = device;
         });
+        ChangedDevice(device);
     }
 
     #endregion
@@ -627,6 +652,7 @@ public partial class TaskQueueViewModel : ViewModelBase
         {
             if (!string.IsNullOrWhiteSpace(value))
             {
+                MaaProcessor.Instance.SetTasker();
                 SetNewProperty(ref _currentResource, value);
                 HandlePropertyChanged(ConfigurationKeys.Resource, value);
             }
@@ -634,6 +660,8 @@ public partial class TaskQueueViewModel : ViewModelBase
     }
 
     #endregion
+
+    #region 缩放
 
     // 三列宽度配置
     private const string DefaultColumn1Width = "350";
@@ -877,4 +905,6 @@ public partial class TaskQueueViewModel : ViewModelBase
             return true;
         }
     }
+
+    #endregion
 }

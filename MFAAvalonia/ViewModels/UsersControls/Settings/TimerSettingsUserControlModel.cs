@@ -26,7 +26,7 @@ public partial class TimerSettingsUserControlModel : ViewModelBase
     {
         GlobalConfiguration.SetValue(ConfigurationKeys.ForceScheduledStart, value.ToString());
     }
-    
+
     public IAvaloniaReadOnlyList<MFAConfiguration> ConfigurationList { get; set; } = ConfigurationManager.Configs;
 
     public partial class TimerModel
@@ -146,7 +146,10 @@ public partial class TimerSettingsUserControlModel : ViewModelBase
                 if (config != ConfigurationManager.GetCurrentConfiguration())
                 {
                     ConfigurationManager.SetDefaultConfig(config);
-                    Instances.RestartApplication(true);
+                    if (Instances.RootViewModel.IsRunning)
+                        Instances.TaskQueueViewModel.StopTask(() => Instances.RestartApplication(true, true));
+                    else
+                        Instances.RestartApplication(true, true);
                 }
             }
         }
@@ -156,9 +159,10 @@ public partial class TimerSettingsUserControlModel : ViewModelBase
             var timer = Timers.FirstOrDefault(t => t.TimerId == timerId, null);
             if (timer != null)
             {
-                if (Convert.ToBoolean(GlobalConfiguration.GetValue(ConfigurationKeys.ForceScheduledStart, bool.FalseString)) && Instances.RootViewModel.IsRunning)
-                    Instances.TaskQueueViewModel.StopTask();
-                Instances.TaskQueueViewModel.StartTask();
+                if (Instances.TimerSettingsUserControlModel.ForceScheduledStart && Instances.RootViewModel.IsRunning)
+                    Instances.TaskQueueViewModel.StopTask(Instances.TaskQueueViewModel.StartTask);
+                else
+                    Instances.TaskQueueViewModel.StartTask();
             }
         }
     }

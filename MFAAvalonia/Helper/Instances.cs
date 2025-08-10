@@ -59,13 +59,13 @@ public static partial class Instances
     /// </summary>
     public static void ShutdownApplication()
     {
-        DispatcherHelper.RunOnMainThread(() => ApplicationLifetime.MainWindow?.Close());
+        DispatcherHelper.PostOnMainThread(() => ApplicationLifetime.Shutdown());
     }
 
     /// <summary>
     /// 重启当前应用程序
     /// </summary>
-    public static void RestartApplication(bool noAutoStart = false)
+    public static void RestartApplication(bool noAutoStart = false,bool forgeStop = false)
     {
         if (noAutoStart)
             GlobalConfiguration.SetValue(ConfigurationKeys.NoAutoStart, bool.TrueString);
@@ -81,7 +81,10 @@ public static partial class Instances
         try
         {
             process.Start();
-            ShutdownApplication();
+            if (forgeStop)
+                Environment.Exit(0);
+            else
+                ShutdownApplication();
         }
         catch (Exception ex)
         {
@@ -210,9 +213,9 @@ public static partial class Instances
     private static SettingsViewModel _settingsViewModel;
     private static ResourcesView _resourcesView;
     private static ResourcesViewModel _resourcesViewModel;
-
-    private static AnnouncementViewModel _announcementViewModel;
-
+    private static ScreenshotView _screenshotView;
+    private static ScreenshotViewModel _screenshotViewModel;
+    
     private static ConnectSettingsUserControl _connectSettingsUserControl;
     private static ConnectSettingsUserControlModel _connectSettingsUserControlModel;
     private static GuiSettingsUserControl _guiSettingsUser;

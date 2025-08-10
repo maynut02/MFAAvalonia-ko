@@ -164,20 +164,21 @@ public class DragDropExtensions
             _ => throw new ArgumentOutOfRangeException($"AnimationDuration must be greater than or equal to 150, but was {value}")
         });
 
-    // public static int GetHoldDurationMilliseconds(ListBox element) =>
-    //     element.GetValue(HoldDurationMillisecondsProperty);
-    //
-    // public static void SetHoldDurationMilliseconds(ListBox element, int value) =>
-    //     element.SetValue(HoldDurationMillisecondsProperty, value switch
-    //     {
-    //         >= 0 => value,
-    //         _ => throw new ArgumentOutOfRangeException($"HoldDurationMilliseconds must be greater than or equal to 0, but was {value}")
-    //     });
-    // private static DateTime? GetPressedTime(ListBox element) =>
-    //     element.GetValue(PressedTimeProperty);
-    //
-    // private static void SetPressedTime(ListBox element, DateTime? value) =>
-    //     element.SetValue(PressedTimeProperty, value);
+    public static int GetHoldDurationMilliseconds(ListBox element) =>
+        element.GetValue(HoldDurationMillisecondsProperty);
+    
+    public static void SetHoldDurationMilliseconds(ListBox element, int value) =>
+        element.SetValue(HoldDurationMillisecondsProperty, value switch
+        {
+            >= 0 => value,
+            _ => throw new ArgumentOutOfRangeException($"HoldDurationMilliseconds must be greater than or equal to 0, but was {value}")
+        });
+    private static DateTime? GetPressedTime(ListBox element) =>
+        element.GetValue(PressedTimeProperty);
+    
+    private static void SetPressedTime(ListBox element, DateTime? value) =>
+        element.SetValue(PressedTimeProperty, value);
+    
     public static readonly AttachedProperty<Point?> PressedPositionProperty =
         AvaloniaProperty.RegisterAttached<ListBox, Point?>("PressedPosition", typeof(DragDropExtensions), null);
 
@@ -481,9 +482,6 @@ public class DragDropExtensions
     private static int GetSourceIndex(ListBox listBox, Point position, int defaultValue)
     {
         // 获取滚动视图和相关项
-        var scrollViewer = listBox.GetVisualDescendants()
-            .OfType<ScrollViewer>()
-            .FirstOrDefault();
         var items = listBox.GetVisualDescendants()
             .OfType<ListBoxItem>()
             .ToList();

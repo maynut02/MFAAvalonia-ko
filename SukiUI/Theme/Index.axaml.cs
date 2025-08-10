@@ -271,6 +271,9 @@ public partial class SukiTheme : Styles
     private static readonly Dictionary<string, ResourceDictionary> LocaleToResource = new()
     {
         {
+            "ko-kr", new ko_kr()
+        },
+        {
             "en-US", new en_us()
         },
         {
@@ -278,9 +281,6 @@ public partial class SukiTheme : Styles
         },
         {
             "zh-Hans", new zh_hans()
-        },
-        {
-            "ko-kr", new ko_kr()
         }
     };
 

@@ -7,7 +7,8 @@ public static class ConfigurationKeys
     public const string DefaultConfig = "DefaultConfig";
     public const string ShowGui = "ShowGui";
     public const string LinkStart = "LinkStart";
-    public const string DoNotShowAgain = "AnnouncementInfo.DoNotShowAgain";
+    public const string DoNotShowAnnouncementAgain = "AnnouncementInfo.DoNotShowAgain";
+    public const string DoNotShowChangelogAgain = "Changelog.DoNotShowAgain";
     public const string ForceScheduledStart = "ForceScheduledStart";
     public const string CustomConfig = "CustomConfig";
     public const string NoAutoStart = "NoAutoStart";
@@ -35,8 +36,10 @@ public static class ConfigurationKeys
 
     #region 性能设置
 
+    public const string UseDirectML = "UseDirectML";
     public const string GPUOption = "GPUOption";
-
+    public const string GPUs = "GPUs";
+    
     #endregion
 
     #region 连接设置
@@ -59,10 +62,11 @@ public static class ConfigurationKeys
     public const string Resource = "Resource";
     public const string Recording = "recording";
     public const string SaveDraw = "save_draw";
-    public const string ShowHitDraw = "show_hit_draw";
+    public const string ShowHitDraw = "show_hit_box";
     public const string Prescript = "Prescript";
     public const string Postscript = "Post-script";
-
+    public const string ContinueRunningWhenError = "ContinueRunningWhenError";
+    
     #endregion
 
     #region 界面设置
@@ -119,12 +123,17 @@ public static class ConfigurationKeys
 
     #region 更新
 
+    public const string UIUpdateChannelIndex = "UIUpdateChannelIndex";
+    public const string ResourceUpdateChannelIndex = "ResourceUpdateChannelIndex";
     public const string DownloadSourceIndex = "DownloadSourceIndex";
     public const string EnableAutoUpdateResource = "EnableAutoUpdateResource";
     public const string EnableAutoUpdateMFA = "EnableAutoUpdateMFA";
     public const string EnableCheckVersion = "EnableCheckVersion";
     public const string DownloadCDK = "DownloadCDK";
     public const string GitHubToken = "GitHubToken";
+    public const string ProxyAddress  = "ProxyAddress";   
+    public const string ProxyType = "ProxyType";
+    public const string CurrentTasks = "CurrentTasks";
     
     #endregion
 
@@ -137,4 +146,5 @@ public static class ConfigurationKeys
     public const string MainWindowHeight = "UI.MainWindow.Height";
     
     #endregion
+    
 }

@@ -62,7 +62,7 @@ public static class LanguageHelper
     public static string CurrentLanguage => _currentLanguage;
     public static void Initialize()
     {
-        Console.WriteLine("Initializing LanguageManager...");
+        LoggerHelper.Info("Initializing LanguageManager...");
         LoadLanguages();
     }
 

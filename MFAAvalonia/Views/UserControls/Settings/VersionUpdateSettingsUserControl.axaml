@@ -25,7 +25,8 @@
                 <DockPanel>
                     <TextBlock
                         DockPanel.Dock="Right"
-                        HorizontalAlignment="Center"
+                        HorizontalAlignment="Center" Cursor="Hand" PointerPressed="CopyVersion"
+                        ToolTip.Tip="{markup:I18n {x:Static helper:LangKeys.CopyToClipboard}}"
                         Text="{Binding MfaVersion}" />
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                         <TextBlock
@@ -37,8 +38,9 @@
                 </DockPanel>
                 <DockPanel IsVisible="{Binding ShowResourceVersion}">
                     <TextBlock
-                        DockPanel.Dock="Right"
+                        DockPanel.Dock="Right" Cursor="Hand" PointerPressed="CopyVersion"
                         HorizontalAlignment="Center"
+                        ToolTip.Tip="{markup:I18n {x:Static helper:LangKeys.CopyToClipboard}}"
                         Text="{Binding ResourceVersion}" />
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                         <TextBlock
@@ -51,7 +53,8 @@
                 <DockPanel>
                     <TextBlock
                         DockPanel.Dock="Right"
-                        HorizontalAlignment="Center"
+                        HorizontalAlignment="Center" Cursor="Hand" PointerPressed="CopyVersion"
+                        ToolTip.Tip="{markup:I18n {x:Static helper:LangKeys.CopyToClipboard}}"
                         Text="{Binding MaaFwVersion}" />
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                         <TextBlock
@@ -67,7 +70,38 @@
             <StackPanel Spacing="10">
                 <DockPanel>
                     <ComboBox
-                        Classes="Switch"
+                        DockPanel.Dock="Right"
+                        ItemsSource="{Binding UIUpdateChannelList}"
+                        DisplayMemberBinding="{Binding Name}" Width="215"
+                        SelectedIndex="{Binding UIUpdateChannelIndex}"
+                        IsEnabled="{Binding !IsUpdating, Source={x:Static helper:Instances.RootViewModel}}"
+                        VerticalAlignment="Top" />
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            Text="{markup:I18n {x:Static helper:LangKeys.UIUpdateChannel}}"
+                            VerticalAlignment="Center" />
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel>
+                    <ComboBox
+                        DockPanel.Dock="Right"
+                        ItemsSource="{Binding ResourceUpdateChannelList}"
+                        DisplayMemberBinding="{Binding Name}" Width="215"
+                        SelectedIndex="{Binding ResourceUpdateChannelIndex}"
+                        IsEnabled="{Binding !IsUpdating, Source={x:Static helper:Instances.RootViewModel}}"
+                        VerticalAlignment="Top" />
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            Text="{markup:I18n {x:Static helper:LangKeys.ResourceUpdateChannel}}"
+                            VerticalAlignment="Center" />
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel>
+                    <ComboBox
                         DockPanel.Dock="Right"
                         ItemsSource="{Binding DownloadSourceList}"
                         DisplayMemberBinding="{Binding Name}" Width="215"
@@ -82,12 +116,27 @@
                             VerticalAlignment="Center" />
                     </StackPanel>
                 </DockPanel>
+
                 <DockPanel IsVisible="{calcBinding:Binding 'DownloadSourceIndex==0'}">
-                    <suki:PasswordBox
-                        DockPanel.Dock="Right" Watermark="{markup:I18n {x:Static helper:LangKeys.Optional}}"
-                        HorizontalAlignment="Center"
-                        Password="{Binding GitHubToken}"
-                        Width="215" />
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                        <Button
+                            BorderBrush="Transparent"
+                            BorderThickness="0"
+                            Command="{x:Static utilities:UrlUtilities.OpenLink}"
+                            CommandParameter="{x:Static helper:MFAUrls.GitHubToken}"
+                            Height="40"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,4,0">
+                            <TextBlock
+                                FontSize="14" Foreground="{DynamicResource SukiPrimaryColor}"
+                                Text="{markup:I18n {x:Static helper:LangKeys.AboutToken}}" />
+                        </Button>
+                        <suki:PasswordBox
+                            DockPanel.Dock="Right" Watermark="{markup:I18n {x:Static helper:LangKeys.Optional}}"
+                            HorizontalAlignment="Center" MinHeight="40"
+                            Password="{Binding GitHubToken}"
+                            Width="215" />
+                    </StackPanel>
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                         <TextBlock
                             FontSize="16"
@@ -114,13 +163,36 @@
                             FontSize="14" Foreground="{DynamicResource SukiPrimaryColor}"
                             Text="{markup:I18n {x:Static helper:LangKeys.PurchaseLink}}" />
                     </Button>
-
-
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                         <TextBlock
                             FontSize="16"
                             FontWeight="SemiBold"
                             Text="CDK"
+                            VerticalAlignment="Center" />
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                        <ComboBox
+                            ItemsSource="{Binding ProxyTypeList}"
+                            DisplayMemberBinding="{Binding Name}" Width="215"
+                            SelectedValueBinding="{Binding Other}"
+                            SelectedValue="{Binding ProxyType}"
+                            IsEnabled="{Binding !IsUpdating, Source={x:Static helper:Instances.RootViewModel}}"
+                            VerticalAlignment="Top" />
+                        <TextBox
+                            DockPanel.Dock="Right" MaxHeight="40"
+                            HorizontalAlignment="Center"
+                            IsEnabled="{Binding !IsUpdating, Source={x:Static helper:Instances.RootViewModel}}"
+                            Text="{Binding ProxyAddress}"
+                            Watermark="&lt;IP&gt;:&lt;Port&gt;"
+                            Width="215" />
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            Text="{markup:I18n {x:Static helper:LangKeys.ProxySettings}}"
                             VerticalAlignment="Center" />
                     </StackPanel>
                 </DockPanel>
@@ -266,6 +338,28 @@
                     </StackPanel>
                 </DockPanel>
                 <DockPanel>
+                    <Button
+                        BorderBrush="Transparent"
+                        BorderThickness="0"
+                        Command="{Binding RedownloadResourceCommand}"
+                        Content="{markupExtensions:FluentIcon Icon=ArrowRepeatAll,
+                                                          IconSize=Size16}"
+                        IsEnabled="{calcBinding:Binding '!IsUpdating and Idle',
+                                                        Source={x:Static helper:Instances.RootViewModel}}"
+                        DockPanel.Dock="Right"
+                        Height="40"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,4,0"
+                        ToolTip.Tip="{markup:I18n {x:Static helper:LangKeys.RedownloadResourceFullPackage}}" />
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            Text="{markup:I18n {x:Static helper:LangKeys.RedownloadResourceFullPackage}}"
+                            VerticalAlignment="Center" />
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel IsVisible="{calcBinding:Binding 'DownloadSourceIndex==1'}">
                     <Button
                         BorderBrush="Transparent"
                         BorderThickness="0"

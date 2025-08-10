@@ -3,17 +3,20 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MFAAvalonia.Configuration;
 using MFAAvalonia.Extensions;
+using MFAAvalonia.Extensions.MaaFW;
 using MFAAvalonia.Helper;
-using Semver;
 using SukiUI.Dialogs;
-using SukiUI.Toasts;
-using System;
-using System.Reflection;
+using System.Linq;
 
 namespace MFAAvalonia.ViewModels.Windows;
 
 public partial class RootViewModel : ViewModelBase
 {
+    protected override void Initialize()
+    {
+        CheckDebug();
+    }
+
     [ObservableProperty] private bool _idle = true;
     [ObservableProperty] private bool _isWindowVisible = true;
 
@@ -23,18 +26,20 @@ public partial class RootViewModel : ViewModelBase
     {
         Idle = !value;
     }
+
     public static string Version
     {
         get
         {
-            var version = Assembly.GetExecutingAssembly().GetName().Version;
-            var major = version.Major;
-            var minor = version.Minor >= 0 ? version.Minor : 0;
-            var patch = version.Build >= 0 ? version.Build : 0;
-            return $"v{SemVersion.Parse($"{major}.{minor}.{patch}")}";
+            // var version = Assembly.GetExecutingAssembly().GetName().Version;
+            // var major = version.Major;
+            // var minor = version.Minor >= 0 ? version.Minor : 0;
+            // var patch = version.Build >= 0 ? version.Build : 0;
+            // return $"v{SemVersion.Parse($"{major}.{minor}.{patch}")}";
+            return "v1.6.3-beta.6"; // Hardcoded version for now, replace with dynamic versioning later
         }
     }
-    
+
     [ObservableProperty] private string? _resourceName;
 
     [ObservableProperty] private bool _isResourceNameVisible;
@@ -53,6 +58,22 @@ public partial class RootViewModel : ViewModelBase
     private bool _shouldTip = true;
     [ObservableProperty] private bool _isUpdating;
 
+    partial void OnLockControllerChanged(bool value)
+    {
+        if (value)
+        {
+            Instances.TaskQueueViewModel.ShouldShow = (int)(MaaProcessor.Interface?.Controller?.FirstOrDefault()?.Type).ToMaaControllerTypes(Instances.TaskQueueViewModel.CurrentController);
+        }
+    }
+    public void CheckDebug()
+    {
+        if (IsDebugMode && _shouldTip)
+        {
+            Instances.DialogManager.CreateDialog().OfType(NotificationType.Warning).WithContent("DebugModeWarning".ToLocalization()).WithActionButton("Ok".ToLocalization(), dialog => { }, true).TryShow();
+            _shouldTip = false;
+        }
+    }
+
     public void SetUpdating(bool isUpdating)
     {
         IsUpdating = isUpdating;
@@ -60,11 +81,8 @@ public partial class RootViewModel : ViewModelBase
 
     partial void OnIsDebugModeChanged(bool value)
     {
-        if (value && _shouldTip)
-        {
-            Instances.DialogManager.CreateDialog().OfType(NotificationType.Warning).WithContent("DebugModeWarning".ToLocalization()).WithActionButton("Ok".ToLocalization(), dialog => { }, true).TryShow();
-            _shouldTip = false;
-        }
+        if (value)
+            CheckDebug();
     }
 
     public void ShowResourceName(string name)
@@ -84,7 +102,7 @@ public partial class RootViewModel : ViewModelBase
         IsCustomTitleVisible = true;
         IsResourceNameVisible = false;
     }
-    
+
     [RelayCommand]
     public void ToggleVisible()
     {

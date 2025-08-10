@@ -20,26 +20,30 @@ public partial class GameSettingsUserControlModel : ViewModelBase
 
     [ObservableProperty] private string _postScript = ConfigurationManager.Current.GetValue(ConfigurationKeys.Postscript, string.Empty);
 
+    [ObservableProperty] private bool _continueRunningWhenError = ConfigurationManager.Current.GetValue(ConfigurationKeys.ContinueRunningWhenError, true);
 
     partial void OnEnableRecordingChanged(bool value)
     {
         ConfigurationManager.Maa.SetValue(ConfigurationKeys.Recording, value);
-        MaaProcessor.Utility.SetOptionRecording(value);
+        MaaProcessor.Utility.SetOption_Recording(value);
         Instances.RootViewModel.IsDebugMode = EnableSaveDraw || EnableRecording || ShowHitDraw;
+        MaaProcessor.Instance.SetTasker();
     }
 
     partial void OnEnableSaveDrawChanged(bool value)
     {
         ConfigurationManager.Maa.SetValue(ConfigurationKeys.SaveDraw, value);
-        MaaProcessor.Utility.SetOptionSaveDraw(value);
+        MaaProcessor.Utility.SetOption_SaveDraw(value);
         Instances.RootViewModel.IsDebugMode = EnableSaveDraw || EnableRecording || ShowHitDraw;
+        MaaProcessor.Instance.SetTasker();
     }
 
     partial void OnShowHitDrawChanged(bool value)
     {
         ConfigurationManager.Maa.SetValue(ConfigurationKeys.ShowHitDraw, value);
-        MaaProcessor.Utility.SetOptionShowHitDraw(value);
+        MaaProcessor.Utility.SetOption_DebugMode(value);
         Instances.RootViewModel.IsDebugMode = EnableSaveDraw || EnableRecording || ShowHitDraw;
+        MaaProcessor.Instance.SetTasker();
     }
 
     partial void OnPrescriptChanged(string value)
@@ -51,7 +55,9 @@ public partial class GameSettingsUserControlModel : ViewModelBase
     {
         ConfigurationManager.Current.SetValue(ConfigurationKeys.Postscript, value);
     }
-    //
+    
+    partial void OnContinueRunningWhenErrorChanged(bool value) => HandlePropertyChanged(ConfigurationKeys.ContinueRunningWhenError, value);
+    
     // [ObservableProperty] private ObservableCollection<MaaInterface.MaaCustomResource> _currentResources = [];
     //
     // [ObservableProperty] private string _currentResource = ConfigurationHelper.GetValue(ConfigurationKeys.Resource, string.Empty);

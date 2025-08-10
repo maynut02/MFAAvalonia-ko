@@ -4,9 +4,11 @@ using Avalonia.Controls.ApplicationLifetimes;
 using MFAAvalonia.Configuration;
 using MFAAvalonia.Views.Windows;
 using MFAAvalonia.Helper;
+using MFAAvalonia.ViewModels.Windows;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace MFAAvalonia;
 
@@ -45,8 +47,10 @@ sealed class Program
     {
         try
         {
+            Directory.SetCurrentDirectory(AppContext.BaseDirectory);
             var parsedArgs = ParseArguments(args);
-            LoggerHelper.Info("解析参数：" + JsonConvert.SerializeObject(parsedArgs, Formatting.Indented));
+            LoggerHelper.Info("Args: " + JsonConvert.SerializeObject(parsedArgs, Formatting.Indented));
+            LoggerHelper.Info("MFA version: " + RootViewModel.Version);
             Args = parsedArgs;
             BuildAvaloniaApp()
                 .StartWithClassicDesktopLifetime(args, ShutdownMode.OnMainWindowClose);
